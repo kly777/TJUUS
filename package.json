@@ -1,0 +1,32 @@
+{
+  "name": "tjuus",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "^11.1.0",
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.4.20",
+    "path": "^0.12.7",
+    "vue": "^3.5.10",
+    "vue-router": "4",
+    "vuetify": "^3.7.2"
+  },
+  "devDependencies": {
+    "@mdi/font": "^7.4.47",
+    "@types/cssnano": "^5.1.0",
+    "@types/node": "^22.7.5",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "cssnano": "^7.0.6",
+    "less": "^4.2.0",
+    "naive-ui": "^2.40.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8",
+    "vue-tsc": "^2.1.6"
+  }
+}
