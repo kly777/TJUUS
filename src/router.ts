@@ -9,12 +9,18 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/tjuus/'),
     routes,
 });
 
 
 router.beforeEach((to, _from, next) => {
+    if (to.path === '/tjuus/') {
+        // 如果用户访问的是根路径，则重定向到首页
+        next({ name: 'home' });
+    } else {
+        next();
+    }
     if (to.meta.title) {
         document.title = to.meta.title as string;
     } else {
