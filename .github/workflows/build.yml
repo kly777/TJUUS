@@ -25,8 +25,9 @@ jobs:
     
     - name: 项目打包
       run: |
-        npm install
-        npm run build
+        npm install yarn
+        yarn
+        yarn build
       
     - name: 将打包后的文件提交到dist分支
       uses: JamesIves/github-pages-deploy-action@v4
