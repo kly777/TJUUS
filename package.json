@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vue/tsconfig": "^0.5.1",
     "@vueuse/core": "^11.1.0",
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.20",

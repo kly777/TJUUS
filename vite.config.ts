@@ -22,5 +22,6 @@ export default defineConfig({
         replacement: resolve(__dirname, './src')
       }
     ]
-  }
+  },
+  base: "https://kly777.github.io/tjuus/"
 })
