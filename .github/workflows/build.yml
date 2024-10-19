@@ -1,0 +1,43 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: BUILD
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: npm-build工作
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: 使用 Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - run: npm ci
+    
+    - name: 项目打包
+      run: npm run build
+      
+    - name: 将打包后的文件提交到dist分支
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: 'feat: add built files to dist branch'
+        branch: dist
+        file_pattern: 'dist/*' # 指定哪些文件需要提交到 release 分支
+        commit_options: '--no-verify'
