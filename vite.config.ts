@@ -23,5 +23,5 @@ export default defineConfig({
       }
     ]
   },
-  base: "https://kly777.github.io/tjuus/"
+  base: "https://kly777.github.io/TJUUS/"
 })
