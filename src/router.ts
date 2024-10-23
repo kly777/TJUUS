@@ -3,9 +3,25 @@ import { createRouter, createWebHistory } from "vue-router";
 
 
 const routes = [
-    { path: '/', component: () => import('./components/Home/Home.vue') },
-    { path: '/about', component: () => import("./components/About.vue") },
-    {path:'/news', component: () => import("./components/News.vue") },
+    {
+        path: '/',
+        component: () => import('./components/Home/Home.vue'),
+        name: "Home"
+    },
+    {
+        path: '/about',
+        component: () => import("./components/About.vue"), name: "About"
+    },
+    {
+        path: '/news',
+        component: () => import("./components/News.vue"),
+        name: "News"
+    },
+    {
+        path: "/servers",
+        component: () => import("./components/Servers.vue"),
+        name: "Servers"
+    },
 ]
 
 const router = createRouter({

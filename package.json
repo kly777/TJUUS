@@ -13,6 +13,7 @@
     "@vueuse/core": "^11.1.0",
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.20",
+    "markdown-it": "^14.1.0",
     "path": "^0.12.7",
     "vue": "^3.5.10",
     "vue-router": "4",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@mdi/font": "^7.4.47",
     "@types/cssnano": "^5.1.0",
+    "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.7.5",
     "@vitejs/plugin-vue": "^5.1.4",
     "cssnano": "^7.0.6",

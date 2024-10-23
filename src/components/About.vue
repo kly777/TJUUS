@@ -1,18 +1,24 @@
-<script>
+<script setup lang="ts">
+import markdownit from 'markdown-it'
+const md = markdownit()
+const result = md.render('# This is a heading.\nTesting markdown-it!'
+
+);
+
 </script>
 
 <template>
-    <div>
-        <div class="about-container">
-            <div class="about-title">
-                <div class="about-title-text">关于</div>
-            </div>
-            <div class="about-content">
-                <div class="about-content-text">
-                    <div class="about-content-text-title">关于本站</div>
-                    <div class="about-content-text-content"></div>
-                </div>
-            </div>
+    <div class="container">
+        <div v-html="result">
         </div>
     </div>
 </template>
+
+<style scoped>
+.container {
+    padding:20px;
+    width: 100%;
+    border: 1px solid #a13b3b;
+}
+
+</style>

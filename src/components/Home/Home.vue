@@ -1,27 +1,13 @@
 <script setup lang="ts">
 import "animate.css"
-import { useWindowScroll } from "@vueuse/core"
-import { ref, watch } from "vue"
-const background = ref()
 import Server from "./Server.vue"
 import Achievement from "./Achievement.vue"
+import SPic from "./SPic.vue"
 
-const { y } = useWindowScroll()
-watch(y, (val) => {
-    background.value.style.transform = `translateY(${-val / 6}px)`
-})
 </script>
 
 <template>
-    <div class="home-container animate__animated animate__pulse">
-        <div class="logo animate__animated animate__fadeInUp">
-            <div class="title">TJUUS</div>
-            <div class="describe">TianJinUniversityUnitedServer</div>
-        </div>
-        <div class="background" ref="background">
-
-        </div>
-    </div>
+    <SPic />
     <div class="intro">
         <div class="tip">
             <div class="image">
@@ -32,55 +18,11 @@ watch(y, (val) => {
         <Server class="server" />
         <Server class="server" />
         <div class="achievement">成果</div>
-        <Achievement class="achievement-item" text="123" :picture="'@/assets/tianda1.png'"/>
+        <Achievement class="achievement-item" text="123" :picture="'@/assets/tianda1.png'" />
     </div>
 </template>
 
 <style scoped>
-.home-container {
-    width: 100%;
-    height: calc(100vh - 48px);
-    overflow: hidden;
-
-}
-
-
-.background {
-    background-image: url("../../assets/landsc.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    background-position: center;
-    height: 140%;
-    transform: translateY(0);
-    transition: transform 0.5s ease-out;
-}
-
-.title {
-    color: #ffffff;
-    font-size: 96px;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 0px 8px #666,
-        0px 10px #eee;
-}
-
-.logo {
-    position: absolute;
-    top: 300px;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
-
-.describe {
-    color: #ffffff;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 0px 4px #666;
-}
-
 .intro {
     background-color: #f5f5f5;
     display: grid;
@@ -135,8 +77,8 @@ watch(y, (val) => {
     grid-column-start: 1;
     grid-column-end: 7;
     color: rgba(0,
-        81,
-        135, 0.5);
+            81,
+            135, 0.5);
     font-size: 30px;
     position: relative;
     text-align: center;
@@ -153,8 +95,9 @@ watch(y, (val) => {
     position: absolute;
     top: 3.3em;
     font-size: 10px;
-    left:-70px;
+    left: -70px;
 }
+
 .achievement-item {
     grid-column-start: 2;
     grid-column-end: 6;
