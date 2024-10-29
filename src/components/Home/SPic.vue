@@ -28,7 +28,7 @@ watch(y, (val) => {
 
 
 .background {
-    background-image: url("landsc.jpg");
+    background-image: url("/landsc.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 

@@ -23,7 +23,7 @@
     }
 
     .image {
-        background-image: url("program.jpg");
+        background-image: url("/program.jpg");
         background-size: cover;
         background-position: center;
         height: 100px;

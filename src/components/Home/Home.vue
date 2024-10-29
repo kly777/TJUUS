@@ -15,8 +15,8 @@ import Divline from "./Divline.vue"
         <Server class="server" image-src="tianda1.png" />
         <Divline class="row"></Divline>
         <CardDes class="card-des" pic="复刻.png"/>
-        <CardDes class="card-des" pic="复刻.png"/>
-        <CardDes class="card-des" pic="复刻.png"/>
+        <CardDes class="card-des" pic="wood.jpg"/>
+        <CardDes class="card-des" pic="tianda1.png"/>
     </div>
 </template>
 
