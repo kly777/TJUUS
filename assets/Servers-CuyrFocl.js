@@ -1,1 +1,0 @@
-import{_ as s,o as e,c as r,e as t,b as o}from"./index-zmCIpGC4.js";const _={};function a(c,n){return e(),r("div",null,"hello")}const i=s(_,[["render",a]]),l={class:"servers-container"},p=t({__name:"Servers",setup(c){return(n,d)=>(e(),r("div",l,[o(i)]))}});export{p as default};
