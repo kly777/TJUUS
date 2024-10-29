@@ -3,9 +3,6 @@
         <div class="picture" ref="pic">
             {{ props.picture }}
         </div>
-
-
-
         <div class="text"> {{ props.text }}</div>
     </div>
 

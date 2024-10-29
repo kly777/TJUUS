@@ -23,7 +23,7 @@ import "animate.css"
         关于
       </v-btn>
     </v-app-bar>
-    <v-main>
+    <v-main class="main">
       <RouterView></RouterView>
     </v-main>
 
@@ -36,6 +36,10 @@ import "animate.css"
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+}
+.main{
+    background-color: #f3fafe;
+    min-height: 100vh;
 }
 
 .logo:hover {

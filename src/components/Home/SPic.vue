@@ -4,9 +4,7 @@
             <div class="title">TJUUS</div>
             <div class="describe">TianJinUniversityUnitedServer</div>
         </div>
-        <div class="background" ref="background">
-
-        </div>
+        <div class="background" ref="background" />
     </div>
 </template>
 
@@ -26,12 +24,11 @@ watch(y, (val) => {
     width: 100%;
     height: calc(100vh - 48px);
     overflow: hidden;
-
 }
 
 
 .background {
-    background-image: url("../../assets/landsc.jpg");
+    background-image: url("landsc.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -43,7 +40,7 @@ watch(y, (val) => {
 
 .title {
     color: #ffffff;
-    font-size: 96px;
+    font-size: 136px;
     font-weight: bold;
     text-align: center;
     text-shadow: 0px 8px #666,
@@ -52,7 +49,7 @@ watch(y, (val) => {
 
 .logo {
     position: absolute;
-    top: 300px;
+    top: 20vh;
     left: 0;
     right: 0;
     z-index: 1;
