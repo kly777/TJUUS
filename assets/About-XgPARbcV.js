@@ -1,4 +1,4 @@
-import{d as C0,o as E0,c as F0,a as A0,u as y0,_ as w0}from"./index-DlYVurz9.js";const S0=`# TJUUS 是天津大学最大的MC社团
+import{d as C0,o as E0,c as F0,a as A0,u as y0,_ as w0}from"./index-BLBN8TtQ.js";const S0=`# TJUUS 是天津大学最大的MC社团
 
 1
 1

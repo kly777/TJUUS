@@ -1,0 +1,1 @@
+import{_ as s,o as e,c as r,d as t,b as o}from"./index-BLBN8TtQ.js";const _={};function a(c,n){return e(),r("div",null,"hello")}const d=s(_,[["render",a]]),i={class:"servers-container"},p=t({__name:"Servers",setup(c){return(n,l)=>(e(),r("div",i,[o(d)]))}});export{p as default};
