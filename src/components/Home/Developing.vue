@@ -1,40 +1,26 @@
 <template>
-    <div class="tip">
-        <div class="image" />
-        <div class="tip-text">#网站正在施工中......</div>
+    <div class="bg flex justify-center items-center h-100px w-full mt-5 rounded-3xl relative bg-cover bg-center hover:scale-105 transition-all">
+        <div class="tip-text absolute text-3xl font-bold text-white pointer-events-none transition-all duration-300 ease-in-out">
+            #网站正在施工中......
+        </div>
     </div>
 </template>
 
 <style scoped>
-.tip {
-    font-size: 26px;
-    height: 100px;
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    border-radius: 30px;
-
-    .tip-text {
-        line-height: 100px;
-        color: #010101;
-        position: relative;
-        top: -100px;
-        pointer-events: none;
-    }
-
-    .image {
-        background-image: url("/program.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 100px;
-        opacity: 0.3;
-        border-radius: 30px;
-        transition: all 0.5s ease-in-out;
-    }
+.bg {
+    background-image: url('/program.jpg');
 }
 
-.image:hover {
-    opacity: 0.5;
-    transform: scale(1.01);
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-center {
+    background-position: center;
+}
+
+.tip-text:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 </style>

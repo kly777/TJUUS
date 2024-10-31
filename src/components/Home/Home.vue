@@ -1,29 +1,28 @@
 <script setup lang="ts">
 import "animate.css"
-import Server from "./Server.vue"
 import SPic from "./SPic.vue"
 import Developing from "./Developing.vue"
 import CardDes from "./CardDes.vue"
 import Divline from "./Divline.vue"
+import Servers from "./Servers.vue"
+import Buildings from "./Buildings.vue"
 </script>
 
 <template>
     <SPic />
     <div class="intro">
         <Developing class="developing" />
-        <Server class="server" image-src="server.jpg" />
-        <Server class="server" image-src="tianda1.png" />
-        <Divline class="row"></Divline>
-        <CardDes class="card-des" pic="复刻.png"/>
-        <CardDes class="card-des" pic="wood.jpg"/>
-        <CardDes class="card-des" pic="tianda1.png"/>
+        <Servers class="row"/>
+        <Divline class="row" main="建设成果" sub="不知道写什么"></Divline>
+        <Buildings class="row"/>
     </div>
 </template>
 
 <style scoped>
-.row{
+.row {
     grid-column: span 6;
 }
+
 .card-des {
     grid-column: span 2;
 }
@@ -37,8 +36,8 @@ import Divline from "./Divline.vue"
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, auto) ;
-    margin: 7vw;
+    grid-template-rows: repeat(4, auto);
+    margin: 4vw;
     grid-row-gap: 40px;
     grid-column-gap: 40px;
 }

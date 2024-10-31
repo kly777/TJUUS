@@ -1,14 +1,24 @@
 <script setup lang="ts">
 import "animate.css"
+import Switcher from "./components/Home/Switcher.vue";
+import { useDarkStore } from "./state";
+import { computed, watch } from "vue";
+import { useTheme } from 'vuetify'
 
+const theme = useTheme()
+
+const store = useDarkStore()
+const dark = computed(() => store.dark)
+
+watch(() => dark.value, () => {
+  theme.global.name.value = dark.value ? 'dark' : 'light'
+})
 </script>
 
 <template>
-  <v-layout>
-    <v-app-bar density="compact" class="animate__animated animate__fadeInDown">
-
-
-      <v-app-bar-title>TJUUS的图标</v-app-bar-title>
+  <v-layout :class="store.dark ? 'dark' : ''">
+    <v-app-bar scroll-behavior="hide elevate inverted" density="compact" class="animate__animated">
+      <v-app-bar-title class="hover:cursor-point">TJUUS</v-app-bar-title>
       <v-spacer></v-spacer>
       <v-btn to="/">
         首页
@@ -22,11 +32,11 @@ import "animate.css"
       <v-btn to="/about">
         关于
       </v-btn>
+      <Switcher class="ml-4 mr-4" />
     </v-app-bar>
-    <v-main class="main">
+    <v-main class="bg-blue50 dark:bg-gray900 duration-1000">
       <RouterView></RouterView>
     </v-main>
-
   </v-layout>
 </template>
 
@@ -37,9 +47,10 @@ import "animate.css"
   will-change: filter;
   transition: filter 300ms;
 }
-.main{
-    background-color: #f3fafe;
-    min-height: 100vh;
+
+.main {
+  background-color: #f3fafe;
+  min-height: 100vh;
 }
 
 .logo:hover {

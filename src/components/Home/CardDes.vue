@@ -1,10 +1,9 @@
 <template>
-    <div class="card-des">
+    <div class="card-des hover:scale-105 transition-all duration-300 min-w-[200px]">
         <div class="pic" ref="picture" />
         <div class="title">{{ title?title:'无标题' }}</div>
         <div class="content">{{ content?content:'无内容' }}</div>
     </div>
-
 </template>
 
 <script setup>
@@ -22,6 +21,7 @@ onMounted(() => {
 })
 
 
+
 </script>
 
 <style scoped>
@@ -33,9 +33,7 @@ onMounted(() => {
     transition: all .5s;
 }
 
-.pic:hover {
-    scale: 1.05;
-}
+
 
 .card-des {
     background-color: #f9f9f9;

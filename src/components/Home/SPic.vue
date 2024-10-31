@@ -22,7 +22,7 @@ watch(y, (val) => {
 <style scoped lang="less">
 .home-container {
     width: 100%;
-    height: calc(100vh - 48px);
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -45,7 +45,15 @@ watch(y, (val) => {
     text-align: center;
     text-shadow: 0px 8px #666,
         0px 10px #eee;
+    font-family: 'FusionPixel', sans-serif;
 }
+@font-face {
+    font-family: 'FusionPixel';
+    src: url('@/fonts/fusion-pixel-12px-monospaced-latin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 .logo {
     position: absolute;
@@ -61,5 +69,6 @@ watch(y, (val) => {
     font-weight: bold;
     text-align: center;
     text-shadow: 0px 4px #666;
+    font-family: 'FusionPixel', sans-serif;
 }
 </style>
