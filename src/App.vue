@@ -2,9 +2,11 @@
 import "animate.css"
 import Switcher from "./components/Home/Switcher.vue";
 import { useDarkStore } from "./state";
-import { computed, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { useTheme } from 'vuetify'
-
+import { NBackTop } from 'naive-ui';
+import { useRouter } from "vue-router";
+const router = useRouter()
 const theme = useTheme()
 
 const store = useDarkStore()
@@ -13,11 +15,14 @@ const dark = computed(() => store.dark)
 watch(() => dark.value, () => {
   theme.global.name.value = dark.value ? 'dark' : 'light'
 })
+const hide = computed(() => router.currentRoute.value.path === '/')
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <v-layout :class="store.dark ? 'dark' : ''">
-    <v-app-bar scroll-behavior="hide elevate inverted" density="compact" class="animate__animated">
+  <v-layout :class="store.dark ? 'dark' : ''" class="min-h-screen">
+    <v-app-bar scroll-behavior="elevate inverted" density="compact"
+      class="animate__animated duration-500 transition-all">
       <v-app-bar-title class="hover:cursor-point">TJUUS</v-app-bar-title>
       <v-spacer></v-spacer>
       <v-btn to="/">
@@ -34,10 +39,13 @@ watch(() => dark.value, () => {
       </v-btn>
       <Switcher class="ml-4 mr-4" />
     </v-app-bar>
-    <v-main class="bg-blue50 dark:bg-gray900 duration-1000">
+    <v-main class="light:bg-blue50 duration-1000 dark:bg-dark">
       <RouterView></RouterView>
     </v-main>
+
+    <n-back-top :right="100" />
   </v-layout>
+  <Footer />
 </template>
 
 <style scoped>

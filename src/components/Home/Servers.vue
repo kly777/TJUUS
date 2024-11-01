@@ -13,8 +13,7 @@ import Server from './Server.vue'
 const servers = ref([
     { imageSrc: 'tianda1.png' },
     { imageSrc: 'tianda2.png' },
-    { imageSrc: 'server3.jpg' },
-    // 添加更多服务器数据
+    { imageSrc: 'server.jpg' },
 ])
 </script>
 

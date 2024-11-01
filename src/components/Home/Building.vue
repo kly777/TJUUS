@@ -1,11 +1,11 @@
 <template>
       <div class="component">
         <div  class="flex justify-center align-center">      
-              <div class="bg rounded-lg hover:scale-108 transition-all duration-300"/>
+              <div class="bg rounded-lg hover:scale-108 transition-all duration-300 border"/>
             </div>
 
-        <h2 class="text-1.5rem font-semibold mb-2 text-center m-t5 ">高速熔炉</h2>
-        <p class="text-center text-.8rem m-t3">高效处理矿石，提升资源获取速度。</p>
+        <h2 class="text-1.5rem font-semibold mb-2 text-center m-t5 dark:text-cyan50">高速熔炉</h2>
+        <p class="text-center text-.8rem dark:text-cyan100">高效处理矿石，提升资源获取速度。</p>
       </div>
      
 </template>

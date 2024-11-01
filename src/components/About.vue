@@ -7,8 +7,8 @@ const result = md.render(about);
 </script>
 
 <template>
-    <div class="container">
-        <div v-html="result">
+    <div class="container sm:mx-10 lg:mx-30 mt-8">
+        <div v-html="result" class="content .dark:text-white">
         </div>
     </div>
 </template>
@@ -17,7 +17,6 @@ const result = md.render(about);
 .container {
     padding:20px;
     width: 100%;
-    border: 1px solid #a13b3b;
     height: 100%;
 }
 

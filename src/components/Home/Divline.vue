@@ -1,31 +1,30 @@
 <template>
     <div>
-        <div class="main">{{main}}</div>
-        <div class="sub">{{sub}}</div>
+        <div class="main light:text-blue500 dark:text-blue200 lg:text-2.5rem md:text-2rem text-1.5rem">{{ main }}</div>
+        <div class="sub">{{ sub }}</div>
     </div>
 </template>
 <script lang="ts" setup>
 const props = defineProps({
     main: String,
-    sub:String
+    sub: String
 }
 )
 </script>
 
 <style scoped>
 .main {
-    color: #5985bf;
+
     text-align: center;
-    font: 2em sans-serif;
     font-weight: 600;
-    opacity: 0.4;
+    opacity: 0.5;
 }
-.sub{
+
+.sub {
     color: #2ca3c1;
     text-align: center;
     font-style: italic;
     position: relative;
     bottom: 17px;
 }
-
 </style>
