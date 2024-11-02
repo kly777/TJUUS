@@ -1,6 +1,6 @@
 <template>
-    <div class="">   
-         <div v-html="result" class="content mt-6 .dark:text-white"></div>
+    <div class="">
+        <div v-html="result" class="content mt-6 .dark:text-white"></div>
     </div>
 </template>
 
@@ -24,5 +24,11 @@ const result = md.render(props.content);
     border: 1px solid #eaeaea;
     max-height: 200px;
     overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content * {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 </style>

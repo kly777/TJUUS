@@ -7,5 +7,5 @@ declare namespace NodeJS {
 }
 
 interface ImportMeta {
-    glob(url: string, options?: { as?: 'url' | 'raw'; eager?: boolean }): Record<string, any>;
+    glob(url: string, options?: { eager?: boolean; query?; import?}): Record<string, any>;
 }
