@@ -9,3 +9,8 @@ declare namespace NodeJS {
 interface ImportMeta {
     glob(url: string, options?: { eager?: boolean; query?; import?}): Record<string, any>;
 }
+
+declare module '*.md?raw' {
+    const content: string;
+    export default content;
+}
