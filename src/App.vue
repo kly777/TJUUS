@@ -17,10 +17,6 @@ watch(() => dark.value, () => {
 })
 const hide = computed(() => router.currentRoute.value.path === '/')
 import Footer from "./App/Footer.vue";
-
-
-
-
 </script>
 
 <template>
