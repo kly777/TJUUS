@@ -1,4 +1,4 @@
-import{M as t}from"./index-BMSQkwth.js";import{d as e,P as o,Q as s,R as a,O as c,_ as r}from"./index-CVCUgeJt.js";const _=`# TJUUS
+import{M as t}from"./index-BMSQkwth.js";import{d as e,P as o,Q as s,R as a,O as c,_ as r}from"./index-BklxlLue.js";const _=`# TJUUS
 
 ## TJUUS 是天津大学最大的MC社团
 
