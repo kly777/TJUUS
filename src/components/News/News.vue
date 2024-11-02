@@ -1,5 +1,5 @@
 <template>
-    <div class="sm:mx-10 lg:mx-30 mt-8">
+    <div class="sm:mx-10 lg:mx-30 mt-8 mx">
         <header class="text-3xl font-bold dark:text-white">News</header>
         <n-divider/>
         <New v-for="newsItem in newsItems" :title="newsItem.fileName" :content="newsItem.content"></New>

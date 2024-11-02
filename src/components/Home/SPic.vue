@@ -1,7 +1,9 @@
 <template>
     <div class="home-container animate__animated animate__pulse">
         <div class="logo animate__animated animate__fadeInUp">
-            <div class="title scale-x-120">TJUUS</div>
+            <div class="title mx-auto">
+                <div class="text-80px sm:text-100px md:text-120px lg:text-140px scale-x-115">TJUUS</div>
+            </div>
             <div class="describe">TianJinUniversity<br>UnitedServer</div>
         </div>
         <div class="background" ref="background" />
@@ -40,7 +42,6 @@ watch(y, (val) => {
 
 .title {
     color: #ffffff;
-    font-size: 136px;
     font-weight: bold;
     text-align: center;
     text-shadow: 0px 8px #666,
