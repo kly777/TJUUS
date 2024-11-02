@@ -16,13 +16,17 @@ watch(() => dark.value, () => {
   theme.global.name.value = dark.value ? 'dark' : 'light'
 })
 const hide = computed(() => router.currentRoute.value.path === '/')
-import Footer from "./components/Footer.vue";
+import Footer from "./App/Footer.vue";
+
+
+
+
 </script>
 
 <template>
   <v-layout :class="store.dark ? 'dark' : ''" class="min-h-screen">
-    <v-app-bar scroll-behavior="elevate inverted" density="compact"
-      class="animate__animated duration-500 transition-all">
+    <v-app-bar scroll-behavior="elevate " density="compact"
+      class="animate__animated duration-500 transition-all sm-px-4 lg:px-50">
       <v-app-bar-title class="hover:cursor-point">TJUUS</v-app-bar-title>
       <v-spacer></v-spacer>
       <v-btn to="/">
@@ -37,9 +41,9 @@ import Footer from "./components/Footer.vue";
       <v-btn to="/about">
         关于
       </v-btn>
-      <Switcher class="ml-4 mr-4" />
+      <Switcher class="ml-4 sm:mr-4 lg:mr-50" />
     </v-app-bar>
-    <v-main class="light:bg-blue50 duration-1000 dark:bg-dark">
+    <v-main class="light:bg-blue50 duration-1000 dark:bg-dark ">
       <RouterView></RouterView>
     </v-main>
 

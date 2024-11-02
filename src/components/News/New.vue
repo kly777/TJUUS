@@ -1,5 +1,5 @@
 <template>
-        <div v-html="result" class="content mt-6"></div>
+    <div v-html="result" class="content mt-6"></div>
 </template>
 
 <script setup lang="ts">

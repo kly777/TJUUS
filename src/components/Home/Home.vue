@@ -3,8 +3,8 @@ import "animate.css"
 import SPic from "./SPic.vue"
 import Developing from "./Developing.vue"
 import Divline from "./Divline.vue"
-import Servers from "./Servers.vue"
-import Buildings from "./Buildings.vue"
+import Servers from "./Server/Servers.vue"
+import Buildings from "./Building/Buildings.vue"
 import Carousel from "./Carousel.vue"
 </script>
 
@@ -18,7 +18,6 @@ import Carousel from "./Carousel.vue"
         <Divline class="row" main="我们是" sub="不知道是什么"></Divline>
         <Carousel class="row" />
     </div>
-
 </template>
 
 <style scoped>

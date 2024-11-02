@@ -5,21 +5,23 @@ const routes = [
     {
         path: '/',
         component: () => import('./components/Home/Home.vue'),
-        name: "Home"
+        name: "Home",
+        meta: { title: "首页" }
     },
     {
         path: '/about',
-        component: () => import("./components/About.vue"), name: "About"
+        component: () => import("./components/About/About.vue"), name: "About"
+        , meta: { title: "关于" }
     },
     {
         path: '/news',
-        component: () => import("./components/News.vue"),
-        name: "News"
+        component: () => import("./components/News/News.vue"),
+        name: "News", meta: { title: "最新消息" }
     },
     {
         path: "/servers",
         component: () => import("./components/Servers.vue"),
-        name: "Servers"
+        name: "Servers", meta: { title: "服务器" }
     },
 ]
 
@@ -37,9 +39,9 @@ router.beforeEach((to, _from, next) => {
         next();
     }
     if (to.meta.title) {
-        document.title = to.meta.title as string;
+        document.title = 'TJUUS - ' + to.meta.title as string;
     } else {
-        document.title = to.name as string;
+        document.title = 'TJUUS - ' + (to.name as string);
     }
     next();
 });

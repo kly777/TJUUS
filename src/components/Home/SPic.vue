@@ -1,8 +1,8 @@
 <template>
     <div class="home-container animate__animated animate__pulse">
         <div class="logo animate__animated animate__fadeInUp">
-            <div class="title">TJUUS</div>
-            <div class="describe">TianJinUniversityUnitedServer</div>
+            <div class="title scale-x-120">TJUUS</div>
+            <div class="describe">TianJinUniversity<br>UnitedServer</div>
         </div>
         <div class="background" ref="background" />
     </div>
@@ -47,6 +47,7 @@ watch(y, (val) => {
         0px 10px #eee;
     font-family: 'FusionPixel', sans-serif;
 }
+
 @font-face {
     font-family: 'FusionPixel';
     src: url('@/fonts/fusion-pixel-12px-monospaced-latin.ttf') format('truetype');
