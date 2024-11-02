@@ -23,18 +23,18 @@ import Footer from "./App/Footer.vue";
   <v-layout :class="store.dark ? 'dark' : ''" class="min-h-screen">
     <v-app-bar scroll-behavior="elevate " density="compact"
       class="animate__animated duration-500 transition-all sm-px-4 lg:px-50">
-      <v-app-bar-title class="hover:cursor-point">TJUUS</v-app-bar-title>
+      <v-app-bar-title class="">TJUUS</v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-btn to="/">
+      <v-btn to="/" class="mx-1">
         首页
       </v-btn>
-      <v-btn to="/news">
+      <v-btn to="/news" class="mx-1">
         新闻
       </v-btn>
-      <v-btn to="/servers">
+      <v-btn to="/servers" class="mx-1">
         服务器列表
       </v-btn>
-      <v-btn to="/about">
+      <v-btn to="/about" class="mx-1">
         关于
       </v-btn>
       <Switcher class="ml-4 sm:mr-4 lg:mr-40" />
