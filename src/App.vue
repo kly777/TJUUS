@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import "animate.css"
-import Switcher from "./components/Home/Switcher.vue";
+import Switcher from "./App/Switcher.vue";
 import { useDarkStore } from "./state";
 import { computed, ref, watch } from "vue";
 import { useTheme } from 'vuetify'
@@ -41,7 +41,7 @@ import Footer from "./App/Footer.vue";
       <v-btn to="/about">
         关于
       </v-btn>
-      <Switcher class="ml-4 sm:mr-4 lg:mr-50" />
+      <Switcher class="ml-4 sm:mr-4 lg:mr-40" />
     </v-app-bar>
     <v-main class="light:bg-blue50 duration-1000 dark:bg-dark ">
       <RouterView></RouterView>
