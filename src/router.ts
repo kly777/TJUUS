@@ -19,6 +19,12 @@ const routes = [
         name: "News", meta: { title: "最新消息" }
     },
     {
+        path: '/news/:id',
+        component: () => import("./components/News/NewsDetail.vue"),
+        name: "NewsDetail",
+        meta: { title: "新闻详情" }
+    },
+    {
         path: "/servers",
         component: () => import("./components/Servers.vue"),
         name: "Servers", meta: { title: "服务器" }

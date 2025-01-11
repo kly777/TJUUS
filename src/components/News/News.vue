@@ -25,7 +25,9 @@ async function getNews() {
         console.log(fileName);
 
 
-        newsItems.value.push({ fileName, content: mdContent });
+        // 获取前6行内容
+        const previewContent = mdContent.split('\n').slice(0, 6).join('\n');
+        newsItems.value.push({ fileName, content: previewContent });
     }
 }
 

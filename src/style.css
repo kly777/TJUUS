@@ -11,10 +11,21 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
 
+.dark {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #1a1a1a;
+}
+
+.dark a {
+    color: #ffffff;
+}
+
+.dark a:hover {
+    color: #929292;
 }
 
 #app {
     margin: 0 auto;
 }
-

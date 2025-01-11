@@ -33,14 +33,28 @@
 <style scoped>
 .main-base {
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: var(--base-bg);
   border-radius: 8px;
+  color: var(--text-color);
 }
 
 .component {
   padding: 15px;
-  background-color: #ffffff;
+  background-color: var(--component-bg);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+
+:root {
+  --base-bg: #f0f0f0;
+  --component-bg: #ffffff;
+  --text-color: #000000;
+}
+
+.dark {
+  --base-bg: #1a1a1a;
+  --component-bg: #2d2d2d;
+  --text-color: rgba(255, 255, 255, 0.87);
 }
 </style>
