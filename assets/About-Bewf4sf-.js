@@ -1,4 +1,4 @@
-import{M as t}from"./index-BMSQkwth.js";import{d as e,P as o,Q as s,R as a,O as c,_ as r}from"./index-Lixa1wv7.js";const _=`# TJUUS
+import{M as t}from"./index-BMSQkwth.js";import{d as e,P as o,Q as s,R as a,O as c,_ as r}from"./index-G_6FZQ9v.js";const _=`# TJUUS
 
 ## TJUUS 是一个以天津大学为组织中心的 MC 社区 
 
