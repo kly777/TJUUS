@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import about from './about.md?raw'
+import about from './About/about.md?raw'
 import markdownit from 'markdown-it'
 const md = markdownit()
 const result = md.render(about);

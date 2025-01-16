@@ -4,18 +4,18 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
     {
         path: '/',
-        component: () => import('./components/Home/Home.vue'),
+        component: () => import('./components/Home.vue'),
         name: "Home",
         meta: { title: "首页" }
     },
     {
         path: '/about',
-        component: () => import("./components/About/About.vue"), name: "About"
+        component: () => import("./components/About.vue"), name: "About"
         , meta: { title: "关于" }
     },
     {
         path: '/news',
-        component: () => import("./components/News/News.vue"),
+        component: () => import("./components/News.vue"),
         name: "News", meta: { title: "最新消息" }
     },
     {

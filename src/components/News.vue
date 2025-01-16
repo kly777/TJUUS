@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import { NDivider } from 'naive-ui';
 import { ref, onMounted } from 'vue';
-import New from './New.vue';
+import New from './News/New.vue';
 
 
 
@@ -42,7 +42,6 @@ onMounted(async () => {
     box-sizing: border-box;
     min-width: 200px;
     max-width: 1280px;
-    margin: 0 auto;
-    padding: 45px;
+  padding: 45px;
 }
 </style>

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import "animate.css"
-import SPic from "./SPic.vue"
-import Developing from "./Developing.vue"
-import Divline from "./Divline.vue"
-import Servers from "./Server/Servers.vue"
-import Buildings from "./Building/Buildings.vue"
-import Carousel from "./Carousel.vue"
+import SPic from "./Home/SPic.vue"
+import Developing from "./Home/Developing.vue"
+import Divline from "./Home/Divline.vue"
+import Servers from "./Home/Server/Servers.vue"
+import Buildings from "./Home/Building/Buildings.vue"
+import Carousel from "./Home/Carousel.vue"
 </script>
 
 <template>
@@ -36,7 +36,7 @@ import Carousel from "./Carousel.vue"
 
 .developing {
     grid-column: 1 / 7;
-    background: url('/public/wood.jpg') center/cover;
+    background: url('/wood.jpg') center/cover;
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
