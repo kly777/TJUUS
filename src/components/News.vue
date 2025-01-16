@@ -1,5 +1,5 @@
 <template>
-    <div class="sm:mx-10 lg:mx-30 mt-8 mx">
+    <div class="sm:mx-10 lg:mx-30 mt-8 mx mainnews">
         <header class="text-3xl font-bold dark:text-white">News</header>
         <n-divider />
         <New v-for="newsItem in newsItems" :title="newsItem.fileName" :content="newsItem.content"></New>
@@ -35,3 +35,14 @@ onMounted(async () => {
     await getNews();
 });
 </script>
+
+<style scoped>
+.mainnews {
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 45px;
+}
+</style>
