@@ -20,7 +20,7 @@ const servers = ref([
 <style scoped>
 .servers-container {
     padding: 20px;
-    width:100%;
+    width: 80%;
 }
 
 .grid {

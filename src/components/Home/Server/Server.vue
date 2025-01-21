@@ -1,14 +1,7 @@
 <template>
-    <div
-        class="container"
-        :style="{ backgroundImage: `url(${props.imageSrc})` }"
-    >
+    <div class="container" :style="{ backgroundImage: `url(${props.imageSrc})` }">
         <h3 class="title">xxx服务器</h3>
-
         <div class="options">
-            <v-btn class="btn rounded-xl"> 选项一 </v-btn>
-
-            <v-btn class="btn rounded-xl"> 选项二 </v-btn>
         </div>
     </div>
 </template>
@@ -17,6 +10,7 @@
 const props = defineProps<{
     imageSrc: string;
 }>();
+import { NButton } from 'naive-ui';
 </script>
 
 <style scoped less>

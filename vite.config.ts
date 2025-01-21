@@ -25,5 +25,8 @@ export default defineConfig({
       }
     ]
   },
-  base: "https://kly777.github.io/TJUUS/"
+  base: "https://kly777.github.io/TJUUS/",
+  server:{
+    host:"0.0.0.0"
+  }
 })

@@ -1,19 +1,13 @@
-
 body {
-    font-family: 'Fusion Pixel', sans-serif;
+    font-family: "Fusion Pixel", sans-serif;
     line-height: 1.6;
     background-color: #f8f9fa;
 }
-
-
-
-
 
 /* 响应式图片 */
 img {
     max-width: 100%;
     height: auto;
-    border-radius: 0.5rem;
 }
 
 /* 动画效果 */

@@ -1,6 +1,6 @@
 <template>
     <div
-        class="bg flex justify-center items-center h-100px w-95% mt-5 rounded-3xl relative bg-cover bg-center hover:scale-105 transition-all">
+        class="bg flex justify-center items-center h-100px w-85% mt-5 rounded-3xl relative bg-cover bg-center hover:scale-105 transition-all">
         <div
             class="tip-text absolute text-3xl font-bold text-white pointer-events-none transition-all duration-300 ease-in-out">
             #网站正在施工中......

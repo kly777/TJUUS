@@ -6,13 +6,16 @@ import Divline from "./Home/Divline.vue"
 import Servers from "./Home/Server/Servers.vue"
 import Buildings from "./Home/Building/Buildings.vue"
 import Carousel from "./Home/Carousel.vue"
+import { NDivider } from "naive-ui"
 </script>
 
 <template>
     <SPic />
-    <div class="intro sm:mx-10 lg:mx-30 my-8">
+    <div class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-5 w-80% py-8">
         <Developing class="developing" />
+        <n-divider></n-divider>
         <Servers class="row" />
+        <n-divider></n-divider>
         <Divline class="row" main="建设成果" sub="不知道写什么"></Divline>
         <Buildings class="row" />
         <Divline class="row" main="我们是" sub="不知道是什么"></Divline>
@@ -22,41 +25,23 @@ import Carousel from "./Home/Carousel.vue"
 
 <style scoped>
 .row {
-    grid-column: span 6;
+    margin: auto;
     transition: all 0.3s ease;
 }
 
-.row:hover {
-    transform: translateY(-5px);
-}
 
-.card-des {
-    grid-column: span 2;
-}
 
 .developing {
-    grid-column: 1 / 7;
-    padding: 2rem;
+    margin:15px auto;
+
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .intro {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-row-gap: 40px;
-    grid-column-gap: 40px;
-
-    padding: 2rem;
-    border-radius: 1rem;
-    margin: 2rem 0;
-    box-sizing: border-box;
+    margin: auto;
     min-width: 200px;
     max-width: 1280px;
-    margin: 0 auto;
-    padding: 45px;
 }
 
 
@@ -68,13 +53,12 @@ import Carousel from "./Home/Carousel.vue"
 
 
 .server {
-    grid-column-start: span 3;
     background: rgba(255, 255, 255, 0.9);
     padding: 1rem;
     border-radius: 0.5rem;
 }
 
-/* 添加动画效果 */
+
 .animate__animated {
     animation-duration: 1s;
 }

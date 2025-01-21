@@ -1,51 +1,51 @@
 <script setup lang="ts">
-import "animate.css"
+import "animate.css";
 import Switcher from "./App/Switcher.vue";
 import { useDarkStore } from "./state";
-import { computed, ref, watch } from "vue";
-import { useTheme } from 'vuetify'
-import { NBackTop } from 'naive-ui';
+import { computed } from "vue";
+import { NBackTop, NLayout, NLayoutHeader, NLayoutContent, NButton, NSpace,NConfigProvider,NLayoutFooter } from 'naive-ui';
 import { useRouter } from "vue-router";
-const router = useRouter()
-const theme = useTheme()
-
-const store = useDarkStore()
-const dark = computed(() => store.dark)
-
-watch(() => dark.value, () => {
-  theme.global.name.value = dark.value ? 'dark' : 'light'
-})
-const hide = computed(() => router.currentRoute.value.path === '/')
 import Footer from "./App/Footer.vue";
+
+const router = useRouter();
+const store = useDarkStore();
+const dark = computed(() => store.dark ? darkTheme : null);
+const hide = computed(() => router.currentRoute.value.path === '/');
+import type { GlobalTheme } from 'naive-ui'
+import { darkTheme } from 'naive-ui'
 </script>
 
 <template>
-  <v-layout :class="store.dark ? 'dark' : ''" class="min-h-screen">
-    <v-app-bar scroll-behavior="elevate " density="compact"
-      class="animate__animated duration-500 transition-all sm-px-4 lg:px-50">
-      <v-app-bar-title class="">TJUUS</v-app-bar-title>
-      <v-spacer></v-spacer>
-      <v-btn to="/" class="mx-1">
-        首页
-      </v-btn>
-      <v-btn to="/news" class="mx-1">
-        新闻
-      </v-btn>
-      <v-btn to="/servers" class="mx-1">
-        服务器列表
-      </v-btn>
-      <v-btn to="/about" class="mx-1">
-        关于
-      </v-btn>
-      <Switcher class="ml-4 sm:mr-4 lg:mr-40" />
-    </v-app-bar>
-    <v-main class="light:bg-blue50 duration-1000 dark:bg-dark ">
-      <RouterView></RouterView>
-    </v-main>
-
-    <n-back-top :right="100" />
-  </v-layout>
-  <Footer />
+  <n-config-provider :theme="dark" class="">
+    <n-layout :class="store.dark ? 'dark' : ''" class="min-h-screen">
+      <n-layout-header class="animate__animated animate__fadeInDown duration-500 transition-all sm-px-4 md-px-20 lg-px-30 px h-12 header fixed z-1"
+        :bordered="true" position="static">
+        <n-space align="center" justify="space-between" class="h-full">
+          <span class="text-lg font-bold">TJUUS</span>
+          <n-space align="center">
+            <router-link to="/" class="mx-1 text-button">
+              首页
+            </router-link>
+            <router-link to="/news" class="mx-1 text-button">
+              文章
+            </router-link>
+            <router-link to="/servers" class="mx-1 text-button">
+              服务器列表
+            </router-link>
+            <router-link to="/about" class="mx-1 text-button">
+              关于
+            </router-link>
+            <Switcher class="ml-4 sm:mr-4 lg:mr-4" />
+          </n-space>
+        </n-space>
+      </n-layout-header>
+      <n-layout-content class="light:bg-blue50 duration-1000 dark:bg-dark">
+        <RouterView></RouterView>
+      </n-layout-content>
+      <n-back-top :right="100" />
+    </n-layout>
+    <Footer />
+  </n-config-provider>
 </template>
 
 <style scoped>
@@ -67,5 +67,16 @@ import Footer from "./App/Footer.vue";
 
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.text-button {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.text-button:hover {
+  text-decoration: underline;
 }
 </style>
