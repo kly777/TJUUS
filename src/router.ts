@@ -46,9 +46,9 @@ router.beforeEach((to, _from, next) => {
         next();
     }
     if (to.meta.title) {
-        document.title = 'TJUUS - ' + to.meta.title as string;
+        document.title = to.meta.title as string + ' | TJUUS';
     } else {
-        document.title = 'TJUUS - ' + (to.name as string);
+        document.title = (to.name as string) + ' | TJUUS';
     }
     next();
 });
