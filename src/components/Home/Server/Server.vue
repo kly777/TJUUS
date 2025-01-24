@@ -1,67 +1,52 @@
 <template>
-    <div class="container" :style="{ backgroundImage: `url(${props.imageSrc})` }">
-        <h3 class="title">xxx服务器</h3>
-        <div class="options">
+    <div
+        class="n-card border-solid border-gray-300 rounded-lg shadow-md border hover:scale-103 transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col md:flex-row p-0">
+            <!-- 图片 -->
+            <div class="w-full md:w-1/2" :class="{ 'order-2': imageOnRight, 'order-1': !imageOnRight }">
+                <img :src="props.imageSrc" class="w-full h-full object-cover" :class="{
+                    'rounded-t-lg md:rounded-l-lg md:rounded-tr-none': !imageOnRight,
+                    'rounded-t-lg md:rounded-r-lg md:rounded-tl-none': imageOnRight,
+                }" />
+            </div>
+
+            <!-- 文字 -->
+            <div class="w-full md:w-1/2 p-4" :class="{ 'order-1': imageOnRight, 'order-2': !imageOnRight }">
+                <h2 class="text-xl font-bold mb-2">{{ props.title }}</h2>
+                <p class="text-gray-700">
+                    {{ props.description }}
+                </p>
+            </div>
         </div>
     </div>
 </template>
 
-<script lang="ts" setup>
-const props = defineProps<{
-    imageSrc: string;
-}>();
-import { NButton } from 'naive-ui';
+<script setup>
+
+// 定义 props
+const props = defineProps({
+    imageSrc: {
+        type: String,
+        required: true,
+    },
+    title: {
+        type: String,
+        required: true,
+    },
+    description: {
+        type: String,
+        required: true,
+    },
+    imageOnRight: {
+        type: Boolean,
+        default: false, // 默认图片在左
+    },
+});
 </script>
 
-<style scoped less>
-.container {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s;
-}
-
-.title {
-    margin-top: 60px;
-    margin-left: 40px;
-    color: #ffffff;
-    font-family: "Arial", sans-serif;
-    font-size: 2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.options {
-    margin-top: 80px;
-    margin-left: 30px;
-    display: flex;
-    gap: 20px;
-}
-
-.btn {
-    margin-left: 0;
-    transition: all 0.5s;
-    font: 1em "Arial", sans-serif;
-    background-color: #4a69bd;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.btn:hover {
-    opacity: 0.9;
-    scale: 1.05;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.container:hover {
-    scale: 1.02;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+<style scoped>
+.n-card {
+    max-width: 100%;
+    height: auto;
 }
 </style>

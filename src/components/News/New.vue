@@ -32,7 +32,11 @@ const props = defineProps<{
         author: string
     }
 }>()
-const result = md.render(props.content);
+const result = lessResult(md.render(props.content));
+
+function lessResult(result: string) {
+    return result.slice(0, 200) + (result.length > 200 ? '......' : '');
+}
 
 function handleClick() {
     router.push({ name: 'NewsDetail', params: { id: props.title } });
@@ -44,7 +48,7 @@ function handleClick() {
     padding: 15px;
     border-radius: 10px;
     border: 1px solid #eaeaea;
-    max-height: 16em;
+
     overflow: hidden;
     position: relative;
 }
@@ -52,9 +56,10 @@ function handleClick() {
 .content2 {
     padding: 15px;
     border-radius: 10px;
-    max-height: 13em;
+
     position: relative;
     padding-top: 0;
+    padding-bottom: 0;
 }
 
 .content::after {

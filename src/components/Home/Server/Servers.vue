@@ -1,7 +1,8 @@
 <template>
     <div class="servers-container">
-        <div class="grid" :style="{ gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))' }">
-            <Server v-for="(server, index) in servers" :key="index" :imageSrc="server.imageSrc" />
+        <div class="grid">
+            <Server v-for="(server, index) in servers" :key="index" :imageSrc="server.imageSrc" title="也许你需要这个"
+                description="休息一下吧" />
         </div>
     </div>
 </template>
@@ -21,10 +22,26 @@ const servers = ref([
 .servers-container {
     padding: 20px;
     width: 80%;
+    margin: 0 auto;
+    /* 居中对齐 */
 }
 
 .grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
+}
+
+/* 添加 Server 组件的样式 */
+.server-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.server-card:hover {
+    transform: translateY(-5px);
 }
 </style>

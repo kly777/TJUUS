@@ -17,9 +17,12 @@ const result = md.render(about);
 
 
 <style scoped>
-.container {
-    padding:20px;
-    width: 100%;
+.content {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
     height: 100%;
 }
 </style>

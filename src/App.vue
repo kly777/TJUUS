@@ -39,7 +39,7 @@ import { darkTheme } from 'naive-ui'
           </n-space>
         </n-space>
       </n-layout-header>
-      <n-layout-content class="light:bg-blue50 duration-1000 dark:bg-dark">
+      <n-layout-content class="light:bg-blue50 duration-1000 dark:bg-dark min-h-screen">
         <RouterView></RouterView>
       </n-layout-content>
       <n-back-top :right="100" />
