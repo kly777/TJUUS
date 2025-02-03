@@ -1,8 +1,8 @@
 <template>
-    <div class="servers-container">
-        <div class="grid">
+    <div class="servers-container ">
+        <div class="grid place-items-center">
             <Server v-for="(server, index) in servers" :key="index" :imageSrc="server.imageSrc" title="也许你需要这个"
-                description="休息一下吧" />
+                description="休息一下吧111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" />
         </div>
     </div>
 </template>
@@ -21,15 +21,14 @@ const servers = ref([
 <style scoped>
 .servers-container {
     padding: 20px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     /* 居中对齐 */
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
+    gap: 40px;
 }
 
 /* 添加 Server 组件的样式 */

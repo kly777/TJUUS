@@ -1,6 +1,6 @@
 <template>
     <div class="building-container">
-        <div class="grid" :style="{ gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))' }">
+        <div class="grid" :style="{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }">
             <Building v-for="(build, index) in buildings" :key="index" :imageSrc="build.imageSrc" />
         </div>
     </div>
@@ -19,12 +19,13 @@ const buildings = ref([
 
 <style scoped>
 .building-container {
-    padding: 20px;
-    width:100%;
+
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .grid {
     display: grid;
-    gap: 20px;
+    gap: 5px;
 }
 </style>

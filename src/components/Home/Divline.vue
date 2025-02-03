@@ -25,6 +25,8 @@ const props = defineProps({
     text-align: center;
     font-style: italic;
     position: relative;
-    bottom: 17px;
+
+    font-size: 1.3em;
+    bottom: 23px;
 }
 </style>

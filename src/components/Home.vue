@@ -7,6 +7,7 @@ import Servers from "./Home/Server/Servers.vue"
 import Buildings from "./Home/Building/Buildings.vue"
 import Carousel from "./Home/Carousel.vue"
 import { NDivider } from "naive-ui"
+import GlassSplitView from "./Home/GlassSplitView.vue"
 </script>
 
 <template>
@@ -17,10 +18,16 @@ import { NDivider } from "naive-ui"
         <Servers class="row" />
         <n-divider></n-divider>
         <Divline class="row" main="建设成果" sub="不知道写什么"></Divline>
+
         <Buildings class="row" />
-        <Divline class="row" main="我们是" sub="不知道是什么"></Divline>
+        <Divline class="row" main="我们是" sub="TJUUS团队"></Divline>
+
+    </div>
+    <GlassSplitView/>
+    <div class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-5 w-80% py-8">
         <Carousel class="row" />
     </div>
+
 </template>
 
 <style scoped>
@@ -32,7 +39,7 @@ import { NDivider } from "naive-ui"
 
 
 .developing {
-    margin:15px auto;
+    margin: 15px auto;
 
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

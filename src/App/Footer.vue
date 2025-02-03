@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <div class="container">
-            <p>TJUUS 2024</p>
+            <p>TJUUS 2025</p>
             <nav>
             </nav>
         </div>

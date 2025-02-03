@@ -1,6 +1,6 @@
 <template>
     <div
-        class="n-card border-solid border-gray-300 rounded-lg shadow-md border hover:scale-103 transition-transform duration-300 ease-in-out">
+        class="n-card border-solid border-gray-300 rounded-lg shadow-md border hover:scale-103 transition-transform duration-300 ease-in-out w-100% box-border max-w-780px">
         <div class="flex flex-col md:flex-row p-0">
             <!-- 图片 -->
             <div class="w-full md:w-1/2" :class="{ 'order-2': imageOnRight, 'order-1': !imageOnRight }">
@@ -13,16 +13,18 @@
             <!-- 文字 -->
             <div class="w-full md:w-1/2 p-4" :class="{ 'order-1': imageOnRight, 'order-2': !imageOnRight }">
                 <h2 class="text-xl font-bold mb-2">{{ props.title }}</h2>
-                <p class="text-gray-700">
-                    {{ props.description }}
+                <p class="">
+                    {{ lessResult(props.description) }}
                 </p>
             </div>
         </div>
     </div>
 </template>
 
-<script setup>
-
+<script setup lang="ts">
+function lessResult(result: string) {
+    return result.slice(0, 30) + (result.length > 30 ? '......' : '');
+}
 // 定义 props
 const props = defineProps({
     imageSrc: {
@@ -46,7 +48,7 @@ const props = defineProps({
 
 <style scoped>
 .n-card {
-    max-width: 100%;
+    max-width: 980px;
     height: auto;
 }
 </style>
