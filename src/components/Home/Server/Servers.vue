@@ -1,5 +1,5 @@
 <template>
-    <div class="servers-container ">
+    <div class="servers-container box-border">
         <div class="grid place-items-center">
             <Server v-for="(server, index) in servers" :key="index" :imageSrc="server.imageSrc" title="也许你需要这个"
                 description="休息一下吧111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" />

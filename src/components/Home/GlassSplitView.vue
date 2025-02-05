@@ -16,7 +16,7 @@
 <style scoped>
 .background {
     background-attachment: fixed;
-    background-image: url(/public/numbers.png);
+    background-image: url(/numbers.png);
     background-position: center;
     background-size: auto;
 }

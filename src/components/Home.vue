@@ -12,7 +12,7 @@ import GlassSplitView from "./Home/GlassSplitView.vue"
 
 <template>
     <SPic />
-    <div class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-5 w-80% py-8">
+    <div class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-0 w-80% py-8">
         <Developing class="developing" />
         <n-divider></n-divider>
         <Servers class="row" />
