@@ -17,7 +17,7 @@
 .background {
     background-attachment: fixed;
     background-image: url(/numbers.png);
-    background-position: center;
+    background-position: 50% 80%;
     background-size: auto;
 }
 
