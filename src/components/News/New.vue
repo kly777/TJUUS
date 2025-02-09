@@ -12,13 +12,11 @@
 
         <div class="flex flex-col md:flex-row">
             <!-- 图片 -->
-            <div v-if="attributes.imageSrc" class="w-full md:w-3/7 order-1 mt ">
-                <img :src="attributes.imageSrc"
-                    class="w-full h-full object-cover rounded !h-100%" />
+            <div v-if="attributes.imageSrc" class="w-95% mx-a md:w-4/9 order-2 mt mr">
+                <img :src="attributes.imageSrc" class="w-100% object-cover rounded !h-100% m-a" />
             </div>
 
-            <div v-html="result" class="content2"
-                :class="{ 'order-2': attributes.imageSrc, 'order-1': !attributes.imageSrc }">
+            <div v-html="result" class="content2 md:w-5/9 order-2 md:order-1">
             </div>
         </div>
 
@@ -72,7 +70,7 @@ function handleClick() {
 }
 
 .content2 {
-    padding:15px;
+    padding: 15px;
     border-radius: 10px;
 
     position: relative;

@@ -30,7 +30,7 @@ import Follow from "./Home/Follow.vue"
         <Carousel class="row my-5" />
 
     </div>
-    <!-- <Follow></Follow> -->
+    <Follow></Follow>
 </template>
 
 <style scoped>

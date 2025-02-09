@@ -21,10 +21,10 @@
 
 <style scoped>
 .footer {
-    background-image: url('/footer.png');
+    box-sizing: border-box;
     background-size: cover;
     background-position: center;
-    background-color: #333;
+    background: linear-gradient(135deg, #161616, #404040);
     color: white;
     padding: 20px 0;
     text-align: center;

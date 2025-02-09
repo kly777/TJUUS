@@ -2,7 +2,14 @@
     <div class="follow-container">
         <div class="overlay">
             <h1>关注我们</h1>
+            <p>
 
+                <a href="https://space.bilibili.com/1343371808" target="_blank"
+                    class="text-white flex items-center justify-center decoration-none">
+                    <img src="/icon/bili.png" alt="bilibili Logo" class="h-7 mr-2" />
+                    bilibili
+                </a>
+            </p>
         </div>
     </div>
 </template>
@@ -13,9 +20,8 @@
 <style scoped>
 .follow-container {
     width: 100%;
-    height: 70vh;
-    background-image: url('tianda1.png');
-    /* 替换为你的背景图片路径 */
+    height: 33vh;
+    background-image: url('eg/6.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -28,7 +34,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* 背景发暗 */
     display: flex;
     flex-direction: column;
     justify-content: center;
