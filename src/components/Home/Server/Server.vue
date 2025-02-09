@@ -3,7 +3,7 @@
         class="n-card border-solid border-gray-300 rounded-lg shadow-md border hover:scale-103 transition-transform duration-300 ease-in-out lg:w-80% box-border max-w-780px">
         <div class="flex flex-col md:flex-row p-0">
             <!-- 图片 -->
-            <div class="w-full md:w-1/2" :class="{ 'order-2': imageOnRight, 'order-1': !imageOnRight }">
+            <div class="w-full md:w-1/2" :class="{ 'md:order-2': imageOnRight, 'order-1': !imageOnRight }">
                 <img :src="props.imageSrc" class="w-full h-full object-cover" :class="{
                     'rounded-t-lg md:rounded-l-lg md:rounded-tr-none': !imageOnRight,
                     'rounded-t-lg md:rounded-r-lg md:rounded-tl-none': imageOnRight,

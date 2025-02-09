@@ -10,13 +10,18 @@
         </div>
 
 
-        <!-- 图片 -->
-        <div v-if="imageSrc" class="w-full md:w-1/2 order-1">
-            <img :src="imageSrc" class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none" />
+        <div class="flex flex-col md:flex-row">
+            <!-- 图片 -->
+            <div v-if="attributes.imageSrc" class="w-full md:w-3/7 order-1 mt ">
+                <img :src="attributes.imageSrc"
+                    class="w-full h-full object-cover rounded !h-100%" />
+            </div>
+
+            <div v-html="result" class="content2"
+                :class="{ 'order-2': attributes.imageSrc, 'order-1': !attributes.imageSrc }">
+            </div>
         </div>
 
-        <div v-html="result" class="content2" :class="{ 'order-2': imageSrc, 'order-1': !imageSrc }">
-        </div>
     </div>
 </template>
 
@@ -37,8 +42,9 @@ const props = defineProps<{
         date: string
         tags: string[]
         author: string
+        imageSrc?: string
     }
-    imageSrc?: string
+
 }>()
 const result = lessResult(md.render(props.content));
 
@@ -66,7 +72,7 @@ function handleClick() {
 }
 
 .content2 {
-    padding: 15px;
+    padding:15px;
     border-radius: 10px;
 
     position: relative;

@@ -3,7 +3,7 @@
         <header class="text-3xl font-bold dark:text-white mt-8">文章</header>
         <n-divider />
         <New v-for="newsItem in newsItems" :title="newsItem.fileName" :content="newsItem.content"
-            :attributes="newsItem.attributes"></New>
+            :attributes="newsItem.attributes" ></New>
     </div>
 </template>
 
@@ -16,11 +16,13 @@ interface Attributes {
     date: string;
     author: string;
     tags: string[];
+    imageSrc?: string;
 }
 interface NewsItem {
     fileName: string;
     content: string;
     attributes: Attributes;
+
 }
 const newsItems = ref<NewsItem[]>([]);
 
