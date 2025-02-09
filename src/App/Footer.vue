@@ -1,9 +1,16 @@
 <template>
     <footer class="footer">
         <div class="container">
-            <p>TJUUS 2025</p>
-            <nav>
-            </nav>
+            <div class="links">
+                <nav>
+                    <a href="https://example1.com" target="_blank">友链1</a>
+                    <a href="https://example2.com" target="_blank">友链2</a>
+                    <a href="https://example3.com" target="_blank">友链3</a>
+                </nav>
+            </div>
+            <div class="text">
+                <p>TJUUS 2025</p>
+            </div>
         </div>
     </footer>
 </template>
@@ -26,15 +33,22 @@
 .footer .container {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.footer nav a {
+.footer .links nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
 }
 
-.footer nav a:hover {
+.footer .links nav a:hover {
     text-decoration: underline;
+}
+
+.footer .text p {
+    margin: 0;
 }
 </style>
