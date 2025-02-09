@@ -1,9 +1,14 @@
 <template>
     <n-carousel autoplay :slides-per-view="slidesPerView" :space-between="20">
-        <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg" />
-        <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg" />
-        <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg" />
-        <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg" />
+        <img class="carousel-img" src="/eg/1.png" />
+        <img class="carousel-img" src="/eg/2.png" />
+
+        <img class="carousel-img" src="/eg/0.png" />
+
+        <img class="carousel-img" src="/eg/5.png" />
+
+        <img class="carousel-img" src="/eg/7.png" />
+        <img class="carousel-img" src="/eg/8.png" />
     </n-carousel>
 </template>
 

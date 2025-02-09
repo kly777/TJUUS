@@ -12,7 +12,7 @@ import { darkTheme } from 'naive-ui'
 
 import type { DropdownOption } from 'naive-ui'
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue';
-import { NDropdown,NIcon } from 'naive-ui';
+import { NDropdown, NIcon } from 'naive-ui';
 import { MenuOutlined } from '@vicons/material'
 const router = useRouter();
 const store = useDarkStore();
@@ -65,7 +65,12 @@ const handleMenuSelect = (key: string) => {
         class="animate__animated animate__fadeInDown duration-500 transition-all sm-px-4 md-px-20 lg-px-30 px h-12 header fixed z-1"
         :bordered="true" position="static">
         <n-space align="center" justify="space-between" class="h-full">
-          <span class="text-lg font-bold">TJUUS</span>
+          <router-link to="/" class="text-icon ">
+            <span class="text-lg font-bold text-center flex items-center">
+              <img class="h-9 p-r logo" src="/logo.png" />
+              TJUUS
+            </span>
+          </router-link>
           <n-space align="center">
             <!-- 响应式导航 -->
             <template v-if="!isMobile">
@@ -108,8 +113,7 @@ const handleMenuSelect = (key: string) => {
 
 <style scoped>
 .logo {
-  height: 6em;
-  padding: 1.5em;
+
   will-change: filter;
   transition: filter 300ms;
 }
@@ -127,7 +131,8 @@ const handleMenuSelect = (key: string) => {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 
-.text-button {
+.text-button,
+.text-icon {
   text-decoration: none;
   color: inherit;
   font-weight: bold;

@@ -1,7 +1,8 @@
 <template>
     <div class="building-container">
         <div class="grid" :style="{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }">
-            <Building v-for="(build, index) in buildings" :key="index" :imageSrc="build.imageSrc" :title="build.title" :description="build.description" />
+            <Building v-for="(build, index) in buildings" :key="index" :imageSrc="build.imageSrc" :title="build.title"
+                :description="build.description" />
         </div>
     </div>
 </template>
@@ -11,9 +12,18 @@ import { ref } from 'vue'
 import Building from './Building.vue'
 
 const buildings = ref([
-    { imageSrc: 'dongdamen.jpeg', title: '天大大门', description: '。。。' },
-    { imageSrc: 'tianda2.png', title: 'Building 2', description: 'Description for Building 2' },
-    { imageSrc: 'server.jpg', title: 'Building 3', description: 'Description for Building 3' },
+    {
+        imageSrc: 'dongdamen.jpeg', title: '天大大门', description: '实事求是'
+    },
+    {
+        imageSrc: 'eg/6.png', title: '网图 0', description: 'Description'
+    },
+    {
+        imageSrc: 'eg/3.png', title: '网图 1', description: 'Description too'
+    },
+    {
+        imageSrc: 'eg/4.png', title: '网图 2', description: 'Description again'
+    }
 ])
 </script>
 

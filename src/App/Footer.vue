@@ -21,6 +21,9 @@
 
 <style scoped>
 .footer {
+    background-image: url('/footer.png');
+    background-size: cover;
+    background-position: center;
     background-color: #333;
     color: white;
     padding: 20px 0;
