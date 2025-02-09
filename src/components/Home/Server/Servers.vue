@@ -1,8 +1,8 @@
 <template>
-    <div class="servers-container box-border">
+    <div class="servers-container sm:w-90% box-border">
         <div class="grid place-items-center">
-            <Server v-for="(server, index) in servers" :key="index" :imageSrc="server.imageSrc" title="也许你需要这个"
-                description="休息一下吧111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" />
+            <Server v-for="(server, index) in servers" :key="index" :imageSrc="server.imageSrc" :title="server.title"
+                :description="server.description" :imageOnRight="index % 2 === 1" />
         </div>
     </div>
 </template>
@@ -12,16 +12,15 @@ import { ref } from 'vue'
 import Server from './Server.vue'
 
 const servers = ref([
-    { imageSrc: 'tianda1.png' },
-    { imageSrc: 'tianda2.png' },
-    { imageSrc: 'server.jpg' },
+    { imageSrc: 'tianda1.png', title: '服务器1', description: '这是服务器1的描述' },
+    { imageSrc: 'tianda2.png', title: '服务器2', description: '这是服务器2的描述' },
+    { imageSrc: 'server.jpg', title: '服务器3', description: '这是服务器3的描述' },
 ])
 </script>
 
 <style scoped>
 .servers-container {
     padding: 20px;
-    width: 100%;
     margin: 0 auto;
     /* 居中对齐 */
 }

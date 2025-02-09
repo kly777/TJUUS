@@ -8,6 +8,7 @@ import Buildings from "./Home/Building/Buildings.vue"
 import Carousel from "./Home/Carousel.vue"
 import { NDivider } from "naive-ui"
 import GlassSplitView from "./Home/GlassSplitView.vue"
+import Follow from "./Home/Follow.vue"
 </script>
 
 <template>
@@ -17,22 +18,23 @@ import GlassSplitView from "./Home/GlassSplitView.vue"
         <n-divider></n-divider>
         <Servers class="row" />
         <n-divider></n-divider>
-        <Divline class="row" main="建设成果" sub="不知道写什么"></Divline>
 
-        <Buildings class="row" />
-        <Divline class="row" main="我们是" sub="TJUUS团队"></Divline>
+        <Divline class="row" main="我们是" sub="TJUUS"></Divline>
 
     </div>
-    <GlassSplitView/>
+    <GlassSplitView />
     <div class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-5 w-80% py-8">
-        <Carousel class="row" />
-    </div>
+        <Divline class="row" main="建设成果" sub="探索Minecraft的无限可能"></Divline>
+        <Buildings class="row" />
+        <Divline class="row my-5" main="我们的伙伴" sub="联合"></Divline>
+        <Carousel class="row my-5" />
 
+    </div>
+    <!-- <Follow></Follow> -->
 </template>
 
 <style scoped>
 .row {
-    margin: auto;
     transition: all 0.3s ease;
 }
 

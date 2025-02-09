@@ -1,9 +1,12 @@
 <template>
-    <div class="background relative sm:h-400px h-300px w-100vw">
+    <div class="background relative sm:h-500px h-300px w-100vw ">
         <div class="p-40px p-l-40 text-white relative">
             <div class="z-1 absolute">
-                <h1>TTTT</h1>
-                <h2>JJJJ</h2>
+                <h1>TJUUS</h1>
+                <h2>是一个</h2>
+                <h2>人很多</h2>
+                <h2>的</h2>
+                <h2>社团</h2>
             </div>
         </div>
     </div>

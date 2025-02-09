@@ -1,6 +1,6 @@
 <template>
     <div
-        class="n-card border-solid border-gray-300 rounded-lg shadow-md border hover:scale-103 transition-transform duration-300 ease-in-out w-100% box-border max-w-780px">
+        class="n-card border-solid border-gray-300 rounded-lg shadow-md border hover:scale-103 transition-transform duration-300 ease-in-out lg:w-80% box-border max-w-780px">
         <div class="flex flex-col md:flex-row p-0">
             <!-- 图片 -->
             <div class="w-full md:w-1/2" :class="{ 'order-2': imageOnRight, 'order-1': !imageOnRight }">
@@ -11,7 +11,7 @@
             </div>
 
             <!-- 文字 -->
-            <div class="w-full md:w-1/2 p-4" :class="{ 'order-1': imageOnRight, 'order-2': !imageOnRight }">
+            <div class="w-full md:w-1/2 px-6 py-4 min-h-40" :class="{ 'order-1': imageOnRight, 'order-2': !imageOnRight }">
                 <h2 class="text-xl font-bold mb-2">{{ props.title }}</h2>
                 <p class="">
                     {{ lessResult(props.description) }}

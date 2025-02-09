@@ -75,9 +75,9 @@ const handleMenuSelect = (key: string) => {
               <router-link to="/news" class="mx-1 text-button">
                 文章
               </router-link>
-              <router-link to="/servers" class="mx-1 text-button">
+              <!-- <router-link to="/servers" class="mx-1 text-button">
                 服务器列表
-              </router-link>
+              </router-link> -->
               <router-link to="/about" class="mx-1 text-button">
                 关于
               </router-link>
