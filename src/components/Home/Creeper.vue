@@ -7,6 +7,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { onMounted, ref, watch } from 'vue';
 import { usePointer, useWindowSize, useMouseInElement, useElementSize } from '@vueuse/core';
+import gsap from 'gsap';
 
 const { x: mouseX, y: mouseY } = usePointer();
 const { width: windowWidth, height: windowHeight } = useWindowSize();
@@ -25,6 +26,7 @@ renderer.setSize(1, 1);
 const loader = new GLTFLoader();
 
 let model: THREE.Group | null = null;
+
 
 onMounted(() => {
     if (creeperContainer.value) {
@@ -76,6 +78,7 @@ onMounted(() => {
 
 function animate() {
     requestAnimationFrame(animate);
+
     renderer.render(scene, camera);
 }
 
@@ -88,8 +91,12 @@ watch([creeperX, creeperY], ([x, y]) => {
         const deltaX = x / centerX;
         const deltaY = y / centerY;
 
-        model.rotation.y = (deltaX * Math.PI - 0.3) / 16; // 绕Y轴旋转
-        model.rotation.x = (deltaY * Math.PI + 0.3) / 8; // 绕X轴旋转
+        gsap.to(model.rotation, {
+            y: (deltaX * Math.PI - 0.3) / 16, // 绕Y轴旋转
+            x: (deltaY * Math.PI + 0.3) / 8, // 绕X轴旋转
+            duration: 0.5,
+            ease: "power2.out"
+        });
     }
 });
 
