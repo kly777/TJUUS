@@ -44,10 +44,6 @@ const menuOptions: DropdownOption[] = [
     key: '/news',
   },
   {
-    label: '服务器列表',
-    key: '/servers',
-  },
-  {
     label: '关于',
     key: '/about',
   }
