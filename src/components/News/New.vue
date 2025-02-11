@@ -1,5 +1,5 @@
 <template>
-    <div class="cursor-pointer content m-6 .dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors "
+    <div class="cursor-pointer content m-6 .dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
         @click="handleClick">
         <div class="tags"> <n-tag type="primary" class="ml-2 w-fit">
                 作者：{{ attributes.author }}

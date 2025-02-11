@@ -9,6 +9,9 @@ import Carousel from "./Home/Carousel.vue"
 import { NDivider } from "naive-ui"
 import GlassSplitView from "./Home/GlassSplitView.vue"
 import Follow from "./Home/Follow.vue"
+import Creeper from "./Home/Creeper.vue"
+import { useWindowSize } from "@vueuse/core"
+const { width: windowWidth, height: windowHeight } = useWindowSize();
 </script>
 
 <template>
@@ -16,7 +19,16 @@ import Follow from "./Home/Follow.vue"
     <div class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-0 w-80% py-8">
         <Developing class="developing" />
         <n-divider></n-divider>
-        <Servers class="row" />
+    </div>
+    <div class="grid sc box-border justify-center items-center sm:m-7 m-9">
+        <div class="grid-cols-1">
+            <Servers class="row min-w-sm lg:w-80%" />
+        </div>
+        <div class="h-auto w-0 justify-self-start creeper">
+            <Creeper class="md:h-400px md:w-400px lg:h-550px lg:w-550px sm:h-350px sm:w-300px w-200px h-250px" />
+        </div>
+    </div>
+    <div class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-0 w-80% py-8">
         <n-divider></n-divider>
 
         <Divline class="row" main="我们是" sub="TJUUS"></Divline>
@@ -34,6 +46,10 @@ import Follow from "./Home/Follow.vue"
 </template>
 
 <style scoped>
+.sc {
+    grid-template-columns: 100% 0%;
+}
+
 .row {
     transition: all 0.3s ease;
 }
@@ -67,8 +83,13 @@ import Follow from "./Home/Follow.vue"
     border-radius: 0.5rem;
 }
 
+.creeper {
+    transform: translate(-46%, 0);
+    transition: all 0.7s ease-in-out;
+}
 
-.animate__animated {
-    animation-duration: 1s;
+.creeper:hover {
+    transform: translate(-49%, 0) scale(0.98);
+
 }
 </style>

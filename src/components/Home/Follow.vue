@@ -1,7 +1,7 @@
 <template>
     <div class="follow-container">
         <div class="overlay">
-            <h1>关注我们</h1>
+            <h1>关注我们!!!!!</h1>
             <p>
 
                 <a href="https://space.bilibili.com/1343371808" target="_blank"

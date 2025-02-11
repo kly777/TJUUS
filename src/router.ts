@@ -29,11 +29,17 @@ const routes = [
         component: () => import("./components/Servers.vue"),
         name: "Servers", meta: { title: "服务器" }
     },
+    {
+        path:"/creeper",
+        component: () => import("./components/Home/Creeper.vue"),
+        name: "Creeper", meta: { title: "苦力怕" }
+    }
 ]
+
 
 const router = createRouter({
 
-    history: createWebHashHistory('/TJUUS/'),
+    history: createWebHistory('/TJUUS/'),
     routes,
 });
 

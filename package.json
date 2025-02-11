@@ -25,6 +25,7 @@
     "path": "^0.12.7",
     "pinia": "^2.2.5",
     "postcss": "^8.4.21",
+    "three": "^0.173.0",
     "vue": "^3.5.10",
     "vue-responsive-components": "^0.2.3",
     "vue-router": "4"
@@ -36,6 +37,7 @@
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.7.5",
+    "@types/three": "^0.173.0",
     "@unocss/preset-mini": "^0.63.6",
     "@vicons/antd": "^0.13.0",
     "@vicons/fluent": "^0.13.0",
