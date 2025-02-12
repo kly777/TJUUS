@@ -21,7 +21,7 @@
 .follow-container {
     width: 100%;
     height: 33vh;
-    background-image: url('eg/6.png');
+    background-image: url('/eg/6.png');
     background-size: cover;
     background-position: center;
     position: relative;
