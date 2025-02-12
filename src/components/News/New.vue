@@ -1,7 +1,7 @@
 <template>
-    <div class="cursor-pointer content m-6 .dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+    <div class="cursor-pointer content m-6 dark:text-white hover:bg-gray-100 dark:hover:bg-dark-600 transition-colors bg-white dark:bg-dark-700 rounded-lg dark:b-b-black shadow-lg overflow-hidden"
         @click="handleClick">
-        <div class="tags"> <n-tag type="primary" class="ml-2 w-fit">
+        <div class="tags"> <n-tag type="primary" class="ml-2 w-fit mb-8px">
                 作者：{{ attributes.author }}
             </n-tag>
             <n-tag type="info" class="ml-2 w-fit">
@@ -10,9 +10,9 @@
         </div>
 
 
-        <div class="flex flex-col md:flex-row">
+        <div class="flex flex-col md:flex-row mt-8px">
             <!-- 图片 -->
-            <div v-if="attributes.imageSrc" class="w-95% mx-a md:w-4/9 order-2 mt mr">
+            <div v-if="attributes.imageSrc" class="w-95% mx-a md:w-4/9 order-2 md:mt md:mr">
                 <img :src="attributes.imageSrc" class="w-100% object-cover rounded !h-100% m-a" />
             </div>
 

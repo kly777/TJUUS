@@ -1,12 +1,26 @@
 <template>
     <div class="background relative sm:h-500px h-300px w-100vw ">
         <div class=" text-white relative">
-            <div class="z-1 absolute overflow-hidden sm:h-500px h-300px p-30px pl-20 box-border">
+            <div
+                class="z-1 absolute overflow-hidden sm:h-500px w-100vw h-300px p-30px pl-20 box-border flex flex-col items-start flex-wrap">
                 <h1>TJUUS</h1>
                 <h2>是一个</h2>
                 <h2>人很多</h2>
                 <h2>的</h2>
                 <h2>社团</h2>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
+                <h3>测试超出范围</h3>
                 <h3>测试超出范围</h3>
                 <h3>测试超出范围</h3>
                 <h3>测试超出范围</h3>

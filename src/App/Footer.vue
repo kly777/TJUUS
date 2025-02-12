@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <div class="container">
-            <div class="links ml-15" >
+            <div class="links ml-15">
                 <nav>
                     <a href="" target="_blank">友链1</a>
                     <a href="" target="_blank">友链2</a>
@@ -24,7 +24,7 @@
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
-    background: linear-gradient(135deg, #161616, #404040);
+    background: linear-gradient(115deg, #161616, #242424);
     color: white;
     padding: 20px 0;
     text-align: center;
