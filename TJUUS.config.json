@@ -1,0 +1,59 @@
+{
+    "server": [
+        {
+            "imageSrc": "server/tianda1.png",
+            "title": "文本1",
+            "description": "这是文本1的描述"
+        },
+        {
+            "imageSrc": "server/tianda2.png",
+            "title": "文本2",
+            "description": "这是文本2的描述"
+        },
+        {
+            "imageSrc": "server/tianda2.png",
+            "title": "文本3",
+            "description": "这是文本3的描述"
+        },
+        {
+            "imageSrc": "server/tianda2.png",
+            "title": "文本4",
+            "description": "这是文本4的描述"
+        },
+        {
+            "imageSrc": "server/tianda2.png",
+            "title": "文本5",
+            "description": "这是文本5的描述"
+        }
+    ],
+    "carousel": [
+        "eg/1.png",
+        "eg/2.png",
+        "eg/0.png",
+        "eg/5.png",
+        "eg/7.png",
+        "eg/8.png"
+    ],
+    "building": [
+        {
+            "imageSrc": "building/dongdamen.jpeg",
+            "title": "天大大门",
+            "description": "实事求是"
+        },
+        {
+            "imageSrc": "eg/6.png",
+            "title": "网图 0",
+            "description": "Description"
+        },
+        {
+            "imageSrc": "eg/3.png",
+            "title": "网图 1",
+            "description": "Description too"
+        },
+        {
+            "imageSrc": "eg/4.png",
+            "title": "网图 2",
+            "description": "Description again"
+        }
+    ]
+}

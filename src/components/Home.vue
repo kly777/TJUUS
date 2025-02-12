@@ -3,7 +3,7 @@ import "animate.css"
 import SPic from "./Home/SPic.vue"
 import Developing from "./Home/Developing.vue"
 import Divline from "./Home/Divline.vue"
-import Servers from "./Home/Server/Servers.vue"
+import InfoCards from "./Home/Server/InfoCards.vue"
 import Buildings from "./Home/Building/Buildings.vue"
 import Carousel from "./Home/Carousel.vue"
 import { NDivider } from "naive-ui"
@@ -16,16 +16,16 @@ const { width: windowWidth, height: windowHeight } = useWindowSize();
 
 <template>
     <SPic />
-    <div class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-0 w-80% py-8">
+    <div class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-0 w-85% py-8">
         <Developing class="developing" />
-        <n-divider></n-divider>
     </div>
-    <div class="grid sc box-border justify-center items-center sm:m-7 m-9">
+    <n-divider></n-divider>
+    <div class="grid sc box-border justify-center items-center sm:mx-7 mx-9">
         <div class="grid-cols-1">
-            <Servers class="row min-w-sm lg:w-80%" />
+            <InfoCards class="row lg:w-80%" />
         </div>
         <div class="h-auto w-0 justify-self-start creeper">
-            <Creeper class="md:h-400px md:w-400px lg:h-550px lg:w-550px sm:h-350px sm:w-300px w-200px h-250px" />
+            <Creeper class="md:h-400px md:w-400px lg:h-550px lg:w-550px sm:h-350px sm:w-300px w-200px h-260px" />
         </div>
     </div>
     <div class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-0 w-80% py-8">

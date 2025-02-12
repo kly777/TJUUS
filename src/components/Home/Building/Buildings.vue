@@ -10,21 +10,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import Building from './Building.vue'
+import Config from "@/../TJUUS.config.json"
 
-const buildings = ref([
-    {
-        imageSrc: 'dongdamen.jpeg', title: '天大大门', description: '实事求是'
-    },
-    {
-        imageSrc: 'eg/6.png', title: '网图 0', description: 'Description'
-    },
-    {
-        imageSrc: 'eg/3.png', title: '网图 1', description: 'Description too'
-    },
-    {
-        imageSrc: 'eg/4.png', title: '网图 2', description: 'Description again'
-    }
-])
+const buildings = ref(Config.building)
 </script>
 
 <style scoped>

@@ -1,22 +1,15 @@
 <template>
     <n-carousel autoplay :slides-per-view="slidesPerView" :space-between="20">
-        <img class="carousel-img" src="/eg/1.png" />
-        <img class="carousel-img" src="/eg/2.png" />
-
-        <img class="carousel-img" src="/eg/0.png" />
-
-        <img class="carousel-img" src="/eg/5.png" />
-
-        <img class="carousel-img" src="/eg/7.png" />
-        <img class="carousel-img" src="/eg/8.png" />
+        <img v-for="(src, index) in imageSources" :key="index" class="carousel-img" :src="src" />
     </n-carousel>
 </template>
 
 <script setup>
 import { NCarousel } from "naive-ui";
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-
+import Config from "@/../TJUUS.config.json"
 const slidesPerView = ref(1);
+const imageSources = ref(Config.carousel);
 
 function updateSlidesPerView() {
     slidesPerView.value = window.innerWidth > 768 ? 3 : 1;
