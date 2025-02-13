@@ -1,0 +1,13 @@
+const n=`---
+author: 口x口
+date: 2025-1-20
+imageSrc: ./landsc.jpg
+---
+
+# Hello,world
+
+## 这是一个测试文本
+
+马儿乖，马儿好，马儿光跑不吃草。马儿乖，马儿好，马儿光跑不吃草。马儿乖，马儿好，马儿光跑不吃草。马儿乖，马儿好，马儿光跑不吃草。
+
+`;export{n as default};
