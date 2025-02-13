@@ -1,22 +1,23 @@
 <template>
     <div class="cursor-pointer content m-6 dark:text-white hover:bg-gray-100 dark:hover:bg-dark-600 transition-colors bg-white dark:bg-dark-700 rounded-lg dark:b-b-black shadow-lg overflow-hidden"
         @click="handleClick">
-        <div class="tags"> <n-tag type="primary" class="ml-2 w-fit mb-8px">
+        <div class="tags"> <n-tag type="primary" class="ml-2 w-fit mb-8px" v-if="attributes.author">
                 作者：{{ attributes.author }}
             </n-tag>
-            <n-tag type="info" class="ml-2 w-fit">
+            <n-tag type="info" class="ml-2 w-fit" v-if="attributes.date">
                 发布于：{{ dayjs(attributes.date, 'Y-M-D').format('YYYY/MM/DD') }}
             </n-tag>
         </div>
 
 
-        <div class="flex flex-col md:flex-row mt-8px">
+        <div class="flex flex-col md:flex-row mt-8px mb">
             <!-- 图片 -->
             <div v-if="attributes.imageSrc" class="w-95% mx-a md:w-4/9 order-2 md:mt md:mr">
                 <img :src="attributes.imageSrc" class="w-100% object-cover rounded !h-100% m-a" />
             </div>
 
-            <div v-html="result" class="content2 md:w-5/9 order-2 md:order-1">
+            <div v-html="result" class="content2 md:w-100% order-2 md:order-1 overflow-hidden line-clamp-6"
+            :class="{'md:ml-4 md:w-5/9': attributes.imageSrc}">
             </div>
         </div>
 
