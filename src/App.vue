@@ -101,9 +101,10 @@ const handleMenuSelect = (key: string) => {
       <n-layout-content class="light:bg-blue50 duration-1000 dark:bg-dark min-h-screen" :class="store.dark ? '' : 'bg-gradient'">
         <RouterView></RouterView>
       </n-layout-content>
-      <n-back-top :right="100" />
+      
     </n-layout>
     <Footer />
+    <n-back-top :show-on-offset="300" class="z-2"/>
   </n-config-provider>
 </template>
 

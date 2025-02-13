@@ -1,6 +1,6 @@
 <template>
     <div class="sm:mx-10 lg:mx-30 mt-8 mx">
-        <div class="tags mt-20">
+        <div class="tags mt-20 ml-10">
             <n-tag type="primary">
                 作者：{{ attributes.author }}
             </n-tag>

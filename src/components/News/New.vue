@@ -17,7 +17,7 @@
             </div>
 
             <div v-html="result" class="content2 md:w-100% order-2 md:order-1 overflow-hidden line-clamp-6"
-            :class="{'md:ml-4 md:w-5/9': attributes.imageSrc}">
+            :class="{'md:w-5/9': attributes.imageSrc}">
             </div>
         </div>
 

@@ -39,8 +39,8 @@ async function getNews() {
         const attributes = result.attributes as Attributes;
         newsItems.value.push({ fileName, content: result.body, attributes: attributes });
         newsItems.value.sort((a, b) => {
-            const dateA = new Date(a.fileName);
-            const dateB = new Date(b.fileName);
+            const dateA = new Date(a.attributes.date);
+            const dateB = new Date(b.attributes.date);
             return dateB.getTime() - dateA.getTime();
         });
     }
