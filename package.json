@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "npm run generate-albums && vite build",
         "preview": "vite preview",
-        "generate-albums": "node scripts/generateAlbums.js"
+        "generate-albums": "node scripts/generateAlbums.cjs"
     },
     "dependencies": {
         "@vue/tsconfig": "^0.5.1",
