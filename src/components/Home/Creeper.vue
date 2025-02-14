@@ -60,7 +60,8 @@ onMounted(() => {
         scene.add(pointLight2);
 
         // 加载模型
-        loader.load('TJUUS/model/scene.gltf', (gltf) => {
+
+        loader.load(`model/scene.gltf`, (gltf) => {
             model = gltf.scene;
             model.rotation.z = 3 * Math.PI / 13;
             scene.add(gltf.scene);
@@ -92,8 +93,8 @@ watch([creeperX, creeperY], ([x, y]) => {
         const deltaY = y / centerY;
 
         gsap.to(model.rotation, {
-            y: (deltaX * Math.PI - 0.3) / 16, // 绕Y轴旋转
-            x: (deltaY * Math.PI + 0.3) / 8, // 绕X轴旋转
+            y: (deltaX * Math.PI - 0.3) / 16,
+            x: (deltaY * Math.PI + 0.3) / 8,
             duration: 0.5,
             ease: "power2.out"
         });
