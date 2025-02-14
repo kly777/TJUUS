@@ -60,7 +60,7 @@ onMounted(() => {
         scene.add(pointLight2);
 
         // 加载模型
-        loader.load('public/model/scene.gltf', (gltf) => {
+        loader.load('TJUUS/model/scene.gltf', (gltf) => {
             model = gltf.scene;
             model.rotation.z = 3 * Math.PI / 13;
             scene.add(gltf.scene);
