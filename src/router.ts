@@ -33,6 +33,10 @@ const routes = [
         path:"/creeper",
         component: () => import("./components/Home/Creeper.vue"),
         name: "Creeper", meta: { title: "苦力怕" }
+    },{
+        path:"/gallery",
+        component: () => import("./components/Gallery.vue"),
+        name: "Gallery", meta: { title: "图库" }
     }
 ]
 

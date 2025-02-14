@@ -30,7 +30,7 @@ import Creeper from "./Home/Creeper.vue"
             <InfoCards class="row lg:w-80%" />
         </div>
         <div class="h-auto w-0 justify-self-start creeper">
-            <Creeper class="md:h-400px md:w-400px lg:h-550px lg:w-550px sm:h-350px sm:w-300px w-200px h-260px" />
+            <Creeper class="md:h-400px md:w-400px lg:h-550px lg:w-550px sm:h-350px sm:w-300px w-250px h-260px" />
         </div>
     </div>
 

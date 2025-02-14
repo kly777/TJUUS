@@ -36,22 +36,22 @@
     ],
     "building": [
         {
-            "imageSrc": "building/dongdamen.jpeg",
+            "imageSrc": "building/eastDoor.png",
             "title": "天大大门",
             "description": "实事求是"
         },
         {
-            "imageSrc": "eg/6.png",
-            "title": "网图 0",
+            "imageSrc": "building/shiShi.png",
+            "title": "北洋广场",
             "description": "Description"
         },
         {
-            "imageSrc": "eg/3.png",
+            "imageSrc": "building/胡.png",
             "title": "网图 1",
             "description": "Description too"
         },
         {
-            "imageSrc": "eg/4.png",
+            "imageSrc": "building/水塔.png",
             "title": "网图 2",
             "description": "Description again"
         }

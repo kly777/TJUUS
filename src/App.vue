@@ -44,6 +44,10 @@ const menuOptions: DropdownOption[] = [
     key: '/news',
   },
   {
+    label: '相册',
+    key: '/gallery',
+  },
+  {
     label: '关于',
     key: '/about',
   }
@@ -76,9 +80,9 @@ const handleMenuSelect = (key: string) => {
               <router-link to="/news" class="mx-1 text-button">
                 文章
               </router-link>
-              <!-- <router-link to="/servers" class="mx-1 text-button">
-                服务器列表
-              </router-link> -->
+              <router-link to="/gallery" class="mx-1 text-button">
+                相册
+              </router-link>
               <router-link to="/about" class="mx-1 text-button">
                 关于
               </router-link>
@@ -98,13 +102,14 @@ const handleMenuSelect = (key: string) => {
           </n-space>
         </n-space>
       </n-layout-header>
-      <n-layout-content class="light:bg-blue50 duration-1000 dark:bg-dark min-h-screen" :class="store.dark ? '' : 'bg-gradient'">
+      <n-layout-content class="light:bg-blue50 duration-1000 dark:bg-dark min-h-screen"
+        :class="store.dark ? '' : 'bg-gradient'">
         <RouterView></RouterView>
       </n-layout-content>
-      
+
     </n-layout>
     <Footer />
-    <n-back-top :show-on-offset="300" class="z-2"/>
+    <n-back-top :show-on-offset="300" class="z-2" />
   </n-config-provider>
 </template>
 
@@ -143,25 +148,25 @@ const handleMenuSelect = (key: string) => {
 .bg-gradient {
   background-attachment: fixed;
   background-size:
-      130vmax 130vmax,
-      80vmax 80vmax,
-      90vmax 90vmax,
-      110vmax 110vmax,
-      90vmax 90vmax;
-    background-position:
-      -80vmax -80vmax,
-      60vmax -30vmax,
-      10vmax 10vmax,
-      -30vmax -10vmax,
-      50vmax 50vmax;
-    background-repeat: no-repeat;
-    animation: 10s movement linear infinite;
+    130vmax 130vmax,
+    80vmax 80vmax,
+    90vmax 90vmax,
+    110vmax 110vmax,
+    90vmax 90vmax;
+  background-position:
+    -80vmax -80vmax,
+    60vmax -30vmax,
+    10vmax 10vmax,
+    -30vmax -10vmax,
+    50vmax 50vmax;
+  background-repeat: no-repeat;
+  animation: 10s movement linear infinite;
   background-image:
-      radial-gradient(closest-side, rgba(235, 104, 78, 0.25), rgba(235, 105, 78, 0)),
-      radial-gradient(closest-side, rgba(11, 57, 243, 0.25), rgba(11, 154, 243, 0)),
-      radial-gradient(closest-side, rgba(247, 224, 110, 0.25), rgba(254, 234, 131, 0)),
-      radial-gradient(closest-side, rgba(170, 142, 245, 0.25), rgba(170, 142, 245, 0)),
-      radial-gradient(closest-side, rgba(199, 251, 255, 0.25), rgba(147, 171, 248, 0));
+    radial-gradient(closest-side, rgba(235, 104, 78, 0.25), rgba(235, 105, 78, 0)),
+    radial-gradient(closest-side, rgba(11, 57, 243, 0.25), rgba(11, 154, 243, 0)),
+    radial-gradient(closest-side, rgba(247, 224, 110, 0.25), rgba(254, 234, 131, 0)),
+    radial-gradient(closest-side, rgba(170, 142, 245, 0.25), rgba(170, 142, 245, 0)),
+    radial-gradient(closest-side, rgba(199, 251, 255, 0.25), rgba(147, 171, 248, 0));
 
 }
 
