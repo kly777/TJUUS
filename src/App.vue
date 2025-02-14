@@ -56,6 +56,8 @@ const menuOptions: DropdownOption[] = [
 const handleMenuSelect = (key: string) => {
   router.push(key);
 };
+
+
 </script>
 
 <template>

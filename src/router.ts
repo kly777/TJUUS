@@ -60,6 +60,7 @@ router.beforeEach((to, _from, next) => {
     } else {
         document.title = (to.name as string) + ' | TJUUS';
     }
+    window.scrollTo(0, 0);
     next();
 });
 
