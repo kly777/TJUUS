@@ -10,8 +10,9 @@ const routes = [
     },
     {
         path: '/about',
-        component: () => import("./components/About.vue"), name: "About"
-        , meta: { title: "关于" }
+        component: () => import("./components/About.vue"),
+        name: "About",
+        meta: { title: "关于" }
     },
     {
         path: '/news',
@@ -33,7 +34,8 @@ const routes = [
         path: "/creeper",
         component: () => import("./components/Home/Creeper.vue"),
         name: "Creeper", meta: { title: "苦力怕" }
-    }, {
+    },
+    {
         path: "/gallery",
         component: () => import("./components/Gallery.vue"),
         name: "Gallery", meta: { title: "图库" }

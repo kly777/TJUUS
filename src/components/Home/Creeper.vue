@@ -14,7 +14,7 @@ const { width: windowWidth, height: windowHeight } = useWindowSize();
 
 const creeperContainer = ref<HTMLElement | null>(null);
 
-const { elementX: creeperX, elementY: creeperY, isOutside} = useMouseInElement(creeperContainer)
+const { elementX: creeperX, elementY: creeperY, isOutside } = useMouseInElement(creeperContainer)
 const { width: creeperW, height: creeperH } = useElementSize(creeperContainer)
 
 const scene = new THREE.Scene();
@@ -47,7 +47,7 @@ onMounted(() => {
         renderer.setClearColor(0x000000, 0);
 
         // 添加环境光
-        const ambientLight = new THREE.AmbientLight(0xFFFFFF,3);
+        const ambientLight = new THREE.AmbientLight(0xFFFFFF, 3);
         scene.add(ambientLight);
 
         // 点光源
@@ -60,7 +60,7 @@ onMounted(() => {
         scene.add(pointLight2);
 
         // 加载模型
-        loader.load('model/scene.gltf', (gltf) => {
+        loader.load('/model/scene.gltf', (gltf) => {
             model = gltf.scene;
             model.rotation.z = 3 * Math.PI / 13;
             scene.add(gltf.scene);
