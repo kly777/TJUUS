@@ -22,9 +22,11 @@
 </template>
 
 <script setup lang="ts">
+// 截取字符串并添加省略号
 function lessResult(result: string) {
     return result.slice(0, 30) + (result.length > 30 ? '......' : '');
 }
+
 // 定义 props
 const props = defineProps({
     imageSrc: {
