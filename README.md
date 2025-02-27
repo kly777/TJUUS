@@ -32,10 +32,4 @@ TJUUS 是一个天津大学 Minecraft 社团
 
 为了方便管理和更新网页内容，项目中使用了 `TJUUS.config.json` 文件来配置各个部分的内容。你可以通过查看并编辑 `TJUUS.config.md` 文件了解如何修改这些配置。
 
-### 如何配置网页
-
-通过 `TJUUS.config.json` 文件，你可以轻松配置网页各部分内容。
-
-`TJUUS.config.md` 文件详细介绍了 `TJUUS.config.json` 的结构和字段含义，帮助你轻松配置网页各部分内容。以下是简要步骤：
-
 -   [TJUUS.config.md](./TJUUS.config.md)：详细介绍 `TJUUS.config.json` 的配置方法和字段说明。
