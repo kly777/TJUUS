@@ -14,7 +14,7 @@
             <div class="photo-grid">
                 <div v-for="photo in selectedAlbum.photos" :key="photo" class="photo" @click="viewPhoto(photo)">
                     <img :src="`gallery/${selectedAlbum.name}/${photo}`" alt=""
-                        :class="{ 'selected-photo': selectedPicture === photo }">
+                        :class="{ 'selected-photo': selectedPicture === photo }" class="box-border">
                     <div class="photo-info text-center">
                         {{ photo.split('.')[0] }}
                     </div>
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div v-if="selectedPicture" class="photo-viewer w-100% flex justify-center mt">
-            <img :src="`gallery/${selectedAlbum?.name}/${selectedPicture}`" alt="" class="w-90%" />
+            <img :src="`gallery/${selectedAlbum?.name}/${selectedPicture}`" alt="" class="w-90% box-border" />
         </div>
     </div>
 </template>
