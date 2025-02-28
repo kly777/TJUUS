@@ -22,6 +22,7 @@
         "pinia": "^3.0.1",
         "postcss": "^8.5.2",
         "three": "^0.173.0",
+        "vite-plugin-compression": "^0.5.1",
         "vite-plugin-imagemin": "^0.6.1",
         "vite-plugin-sitemap": "^0.7.1",
         "vue": "^3.5.10",
