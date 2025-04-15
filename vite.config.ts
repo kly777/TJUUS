@@ -4,7 +4,7 @@ import { resolve } from "path"
 import autoprefixer from "autoprefixer"
 import cssnano from "cssnano";
 import UnoCSS from 'unocss/vite'
-import imagemin from 'vite-plugin-imagemin';
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import sitemapPlugin from 'vite-plugin-sitemap';
 import compression from 'vite-plugin-compression'
 // https://vitejs.dev/config/
@@ -12,7 +12,7 @@ export default defineConfig({
   plugins: [
     vue(),
     UnoCSS(),
-    imagemin(),
+    ViteImageOptimizer(),
     sitemapPlugin(),
     compression({
       verbose: true,
@@ -27,7 +27,6 @@ export default defineConfig({
       plugins: [
         autoprefixer(),
         cssnano(),
-
       ],
     },
   },
