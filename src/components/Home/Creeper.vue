@@ -94,7 +94,7 @@ watch([creeperX, creeperY], ([x, y]) => {
         gsap.to(model.rotation, {
             y: (deltaX * Math.PI - 0.3) / 16,
             x: (deltaY * Math.PI + 0.3) / 8,
-            duration: 0.5,
+            duration: 0.9,
             ease: "power2.out"
         });
     }

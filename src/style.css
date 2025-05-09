@@ -9,6 +9,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+* {
+    font-family: "FusionPixel", sans-serif;
+}
 
 /* 动画效果 */
 @keyframes fadeIn {
