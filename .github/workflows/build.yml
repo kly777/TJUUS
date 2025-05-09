@@ -22,13 +22,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: 项目打包
       run: |
-        npm install yarn
-        yarn
-        yarn build
-      
+        npm install -g pnpm@latest-10
+        pnpm i
+        pnpm build
+
     - name: 将打包后的文件提交到dist分支
       uses: JamesIves/github-pages-deploy-action@v4
       with:

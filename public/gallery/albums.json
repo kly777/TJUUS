@@ -1,44 +1,49 @@
 [
-    {
-        "name": "复刻工程",
-        "cover": "北洋广场.png",
-        "photos": [
-            "北洋广场.png",
-            "大门.png",
-            "雕塑.png",
-            "合照.png",
-            "胡.png",
-            "进度.png",
-            "楼.png",
-            "炮楼.png",
-            "水塔.png",
-            "图书馆.png",
-            "图书馆2.png",
-            "新校区图书馆.png",
-            "dongdamen.jpeg",
-            "eastDoor.png",
-            "shiShi.png"
-        ]
-    },
-    {
-        "name": "红石",
-        "cover": "看不出来.png",
-        "photos": ["看不出来.png"]
-    },
-    {
-        "name": "机械动力",
-        "cover": "火车.png",
-        "photos": ["火车.png", "火车头.png"]
-    },
-    {
-        "name": "建筑",
-        "cover": "书屋.png",
-        "photos": [
-            "书屋.png",
-            "桃花小屋.png",
-            "未知.png",
-            "未知2.png",
-            "无名.png"
-        ]
-    }
+  {
+    "name": "复刻工程",
+    "cover": "dongdamen.jpeg",
+    "photos": [
+      "dongdamen.jpeg",
+      "eastDoor.png",
+      "shiShi.png",
+      "北洋广场.png",
+      "合照.png",
+      "图书馆.png",
+      "图书馆2.png",
+      "大门.png",
+      "新校区图书馆.png",
+      "楼.png",
+      "水塔.png",
+      "炮楼.png",
+      "胡.png",
+      "进度.png",
+      "雕塑.png"
+    ]
+  },
+  {
+    "name": "建筑",
+    "cover": "书屋.png",
+    "photos": [
+      "书屋.png",
+      "无名.png",
+      "未知.png",
+      "未知2.png",
+      "桃花小屋.png"
+    ]
+  },
+  {
+    "name": "机械动力",
+    "cover": "火车.png",
+    "photos": [
+      "火车.png",
+      "火车头.png"
+    ]
+  },
+  {
+    "name": "红石",
+    "cover": "看不出来.png",
+    "photos": [
+      "看不出来.png"
+    ]
+  }
 ]

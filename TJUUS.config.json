@@ -37,23 +37,23 @@
     "building": [
         {
             "imageSrc": "building/eastDoor.png",
-            "title": "天大大门",
-            "description": "实事求是"
+            "title": "东大门",
+            "description": "北洋"
         },
         {
             "imageSrc": "building/shiShi.png",
             "title": "北洋广场",
-            "description": "Description"
+            "description": "实事求是"
         },
         {
             "imageSrc": "building/胡.png",
-            "title": "网图 1",
-            "description": "Description too"
+            "title": "求是亭",
+            "description": "求真务实"
         },
         {
             "imageSrc": "building/水塔.png",
-            "title": "网图 2",
-            "description": "Description again"
+            "title": "校史馆",
+            "description": "百卅天大"
         }
     ]
 }
