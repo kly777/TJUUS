@@ -1,0 +1,12 @@
+import{d as E,r as a,a1 as N,g as D,a2 as M,a3 as o,M as k,N as m,Z as c,X as v,Y as n,R,P as T,O as h,Q as x}from"./index-IiDvUBxG.js";import{M as P}from"./index-BMSQkwth.js";import{f as I,N as b,d as V}from"./index-DjOSjxmd.js";import{N as L}from"./Divider-CnUTm4CY.js";const O=(u,t,r)=>{const e=u[t];return e?typeof e=="function"?e():Promise.resolve(e):new Promise((_,s)=>{(typeof queueMicrotask=="function"?queueMicrotask:setTimeout)(s.bind(null,new Error("Unknown variable dynamic import: "+t+(t.split("/").length!==r?". Note that variables only represent file names one level deep.":""))))})},A={class:"flex flex-col items-center"},C={class:"sm:mx-10 lg:mx-30 mt-8 mx-auto max-w-5xl"},Y={class:"tags mt-20 ml-10 flex flex-wrap gap-4"},j=E({__name:"NewsDetail",setup(u){const t=M(),r=a(""),e=a("");N();const _=new P,s=a({date:"",author:"",tags:[]}),i=a(window.innerWidth<768);return window.addEventListener("resize",()=>{i.value=window.innerWidth<768}),D(async()=>{const l=t.params.id;r.value=l;try{const g=(await O(Object.assign({"../../assets/News/Hello,world.md":()=>o(()=>import("./Hello_world-C7z4Rmqg.js"),[]),"../../assets/News/README.md":()=>o(()=>import("./README-BK0Lm-64.js"),[]),"../../assets/News/TJUUS_config.md":()=>o(()=>import("./TJUUS_config-22oPm-_7.js"),[]),"../../assets/News/写文章.md":()=>o(()=>import("./写文章-i08PMhCq.js"),[]),"../../assets/News/新年新测试功能.md":()=>o(()=>import("./新年新测试功能-OxktYXdW.js"),[])}),`../../assets/News/${l}.md`,5)).default,w=I(g);e.value=_.render(w.body),s.value=w.attributes}catch(f){console.error("加载md文件时出错：",f),e.value="加载内容时出错"}const d=document.createElement("div"),y=d.attachShadow({mode:"open"});y.innerHTML=`
+  <style>
+    :host {
+      font-family: inherit;
+      color: inherit;
+      line-height: 1.6;
+    }
+    h1, h2, h3 { font-weight: bold; }
+    p { margin-bottom: 1em; }
+  </style>
+  ${e.value}
+`;const p=document.getElementById("content");p&&p.appendChild(d)}),(l,d)=>(T(),k("div",A,[m("div",C,[m("div",Y,[c(n(b),{type:"primary",class:"bg-blue-500 text-white"},{default:v(()=>[h(" 作者："+x(s.value.author),1)]),_:1}),c(n(b),{type:"info",class:"bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"},{default:v(()=>[h(" 发布时间："+x(n(V)(s.value.date).format("YYYY-MM-DD")),1)]),_:1})]),c(n(L),{class:"my-8"}),m("div",{class:R(["markdown-body prose max-w-none dark:prose-invert",{"min-w-[200px] max-w-[980px] mx-auto p-11 pt-0":!i.value,"p-4":i.value}]),id:"content"},null,2)])]))}});export{j as default};
