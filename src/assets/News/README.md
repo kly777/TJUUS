@@ -24,7 +24,7 @@ TJUUS 是一个天津大学 Minecraft 社团
 
 -   **前端框架**：Vue 3
 -   **UI 库**：Naive UI
--   **样式框架**：UnoCSS
+-   **样式框架**Tailwind CSS
 -   **构建工具**：Vite
 -   **模型库**：Three.js
 

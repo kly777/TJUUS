@@ -1,5 +1,5 @@
 <template>
-    <div class="creeper" ref="creeperContainer"></div>
+    <div class="creeper min-w-[150px] min-h-[150px] box-border" ref="creeperContainer"></div>
 </template>
 
 <script setup lang="ts">
@@ -112,9 +112,5 @@ watch([creeperH, creeperW], ([h, w]) => {
 </script>
 
 <style scoped>
-.creeper {
-    min-width: 150px;
-    min-height: 150px;
-    box-sizing: border-box;
-}
+
 </style>

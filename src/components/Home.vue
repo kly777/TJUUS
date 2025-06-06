@@ -14,11 +14,12 @@ import Creeper from "./Home/Creeper.vue"
 </script>
 
 <template>
+
     <!-- 页面顶部图片 -->
     <PageBanner />
 
     <!-- 开发中 -->
-    <section class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-0 w-85% py-8">
+    <section class="intro sm:mx-10 md:mx-20 lg:mx-30 mx-0 w-[85%] py-8">
         <Developing class="developing" />
     </section>
 
@@ -30,7 +31,10 @@ import Creeper from "./Home/Creeper.vue"
             <InfoCards class="row lg:w-80%" />
         </div>
         <div class="h-auto w-0 justify-self-start creeper">
-            <Creeper class="md:h-400px md:w-400px lg:h-550px lg:w-550px sm:h-350px sm:w-300px w-250px h-260px" />
+            <Creeper class="sm:h-[350px] sm:w-[300px]
+               md:h-[400px] md:w-[400px]
+               lg:h-[550px] lg:w-[550px]
+               h-[260px] w-[250px]" />
         </div>
     </section>
 
@@ -54,6 +58,7 @@ import Creeper from "./Home/Creeper.vue"
 
     <!-- 关注我们 -->
     <FollowUs class="mt" />
+
 </template>
 
 <style scoped>

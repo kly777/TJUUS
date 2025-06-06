@@ -4,7 +4,7 @@ import router from "./router";
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import { createDiscreteApi } from 'naive-ui'
-import 'virtual:uno.css'
+
 
 const { message, notification, dialog, loadingBar } = createDiscreteApi(
   ['message', 'dialog', 'notification', 'loadingBar']

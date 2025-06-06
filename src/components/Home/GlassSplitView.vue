@@ -1,8 +1,9 @@
 <template>
-    <div class="background relative sm:h-500px h-300px w-100vw ">
-        <div class=" text-white relative">
+    <div class="back-img relative sm:h-[500px] h-[300px] w-screen bg-fixed  bg-[50%_80%] bg-auto">
+        <div class="absolute inset-0  bg-opacity-70 z-[0.5]"></div>
+        <div class="text-white relative">
             <div
-                class="z-1 absolute overflow-hidden sm:h-500px w-100vw h-300px p-30px pl-20 box-border flex flex-col items-start flex-wrap">
+                class="z-[1] absolute overflow-hidden sm:h-[500px] w-screen h-[300px] p-[30px] pl-15 box-border flex flex-col items-start flex-wrap text-2xl gap-y-3.5">
                 <h1>TJUUS</h1>
                 <h2>是一个</h2>
                 <h2>人很多</h2>
@@ -19,14 +20,10 @@
 </script>
 
 <style scoped>
-.background {
-    background-attachment: fixed;
-    background-image: url(/numbers.png);
-    background-position: 50% 80%;
-    background-size: auto;
+.back-img {
+    background-image: url('/numbers.png');
 }
-
-.background::after {
+.back-img::after {
     display: block;
     position: absolute;
     z-index: 0.5;
@@ -36,11 +33,5 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .7);
     content: "";
-}
-
-.mut {
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 </style>

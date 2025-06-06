@@ -2,7 +2,7 @@
     <div class="home-container animate__animated animate__pulse">
         <div class="logo animate__animated animate__fadeInUp pointer-events-none">
             <div class="title mx-auto">
-                <div class="text-80px sm:text-100px md:text-120px lg:text-140px scale-x-115">TJUUS</div>
+                <div class="text-9xl sm:text-100px md:text-120px lg:text-140px scale-x-115">TJUUS</div>
             </div>
             <div class="describe">TianJinUniversity<br>UnitedServer</div>
         </div>

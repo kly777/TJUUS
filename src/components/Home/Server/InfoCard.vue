@@ -1,6 +1,6 @@
 <template>
     <div
-        class="n-card border-solid border-op-20 border-dark-50 rounded-lg shadow-lg border-1 hover:scale-103 transition-all duration-500 ease-in-out lg:w-80% box-border max-w-780px dark:bg-dark-600 dark:border-dark-700 bg-white dark:text-white">
+        class="card border border-solid border-zinc-200 rounded-lg shadow-lg border-opacity-20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white bg-white transition-all duration-500 ease-in-out hover:scale-105 lg:w-4/5 max-w-[780px] box-border">
         <div class="flex flex-col md:flex-row md:h-55 p-0">
             <!-- 图片 -->
             <div class="w-full md:w-1/2" :class="{ 'md:order-2': imageOnRight, 'order-1': !imageOnRight }">
@@ -11,16 +11,14 @@
             </div>
 
             <!-- 文字 -->
-            <div class="w-full md:w-1/2 px-6 py-4 min-h-40" :class="{ 'order-1': imageOnRight, 'order-2': !imageOnRight }">
+            <div class="w-full md:w-1/2 px-6 py-4 min-h-40 text-black dark:text-white"
+                :class="{ 'order-1': imageOnRight, 'order-2': !imageOnRight }">
                 <h2 class="text-xl font-bold mb-2">{{ props.title }}</h2>
-                <p class="">
-                    {{ lessResult(props.description) }}
-                </p>
+                <p>{{ lessResult(props.description) }}</p>
             </div>
         </div>
     </div>
 </template>
-
 <script setup lang="ts">
 // 截取字符串并添加省略号
 function lessResult(result: string) {
@@ -47,10 +45,3 @@ const props = defineProps({
     },
 });
 </script>
-
-<style scoped>
-.n-card {
-    max-width: 780px;
-    height: auto;
-}
-</style>

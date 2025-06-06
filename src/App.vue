@@ -63,13 +63,14 @@ const handleMenuSelect = (key: string) => {
 <template>
   <n-config-provider :theme="dark" class="">
     <n-layout :class="store.dark ? 'dark' : ''" class="min-h-screen">
-      <n-layout-header
-        class="duration-500 transition-all sm-px-4 md-px-20 lg-px-30 px h-12 header fixed z-2 bg-op-60 bg-white dark:bg-dark-600 backdrop-blur-md"
-        :bordered="true" position="static">
+      <n-layout-header :class="store.dark ? 'bg-dark-600/60!' : 'bg-white/60!'" class="duration-500 transition-all
+         sm:px-4 md:px-20 lg:px-30
+         h-12 fixed z-2
+         backdrop-blur-md" :bordered="true" position="static">
         <n-space align="center" justify="space-between" class="h-full">
           <router-link to="/" class="text-icon ">
             <span class="text-lg font-bold text-center flex items-center">
-              <img class="h-9 p-r logo" src="/logo.png" />
+              <img class="h-9! pr-5 logo" src="/logo.png" />
               TJUUS
             </span>
           </router-link>
@@ -117,7 +118,6 @@ const handleMenuSelect = (key: string) => {
 
 <style scoped>
 .logo {
-
   will-change: filter;
   transition: filter 300ms;
 }
