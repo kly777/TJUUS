@@ -1,5 +1,6 @@
 @import "tailwindcss/theme";
 @import "tailwindcss/utilities";
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
     font-family: "Fusion Pixel", sans-serif;
@@ -15,11 +16,11 @@ img {
     box-sizing: border-box;
 }
 
-#app { 
+#app {
     scrollbar-width: thin;
 }
 
-body{
+body {
     background-color: rgba(0, 0, 0, 0.9);
     scroll-behavior: smooth;
 }
