@@ -6,15 +6,15 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { onMounted, ref, watch } from 'vue';
-import { usePointer, useWindowSize, useMouseInElement, useElementSize } from '@vueuse/core';
+import {  useWindowSize, useMouseInElement, useElementSize } from '@vueuse/core';
 import gsap from 'gsap';
 
-const { x: mouseX, y: mouseY } = usePointer();
+// const { x: mouseX, y: mouseY } = usePointer();
 const { width: windowWidth, height: windowHeight } = useWindowSize();
 
 const creeperContainer = ref<HTMLElement | null>(null);
 
-const { elementX: creeperX, elementY: creeperY, isOutside } = useMouseInElement(creeperContainer)
+const { elementX: creeperX, elementY: creeperY } = useMouseInElement(creeperContainer)
 const { width: creeperW, height: creeperH } = useElementSize(creeperContainer)
 
 const scene = new THREE.Scene();

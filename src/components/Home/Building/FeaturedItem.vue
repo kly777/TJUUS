@@ -2,7 +2,8 @@
   <div class="component p-4">
     <!-- 背景图容器 -->
     <div class="flex justify-center items-center">
-      <div class="bg-cover w-full aspect-[1/0.55] rounded-lg hover:scale-105 transition-all duration-300 border-white dark:border-zinc-900"
+      <div
+        class="bg-cover w-full aspect-[1/0.55] rounded-lg hover:scale-105 transition-all duration-300 border-white dark:border-zinc-900"
         :style="{ backgroundImage: `url(${imageSrc})` }" />
     </div>
 
@@ -19,7 +20,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   title: { type: String, required: true },
   description: { type: String, required: true },
   imageSrc: { type: String, required: true }

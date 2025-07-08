@@ -4,12 +4,12 @@
     </n-carousel>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { NCarousel } from "naive-ui";
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import Config from "@/../TJUUS.config.json"
 const slidesPerView = ref(1);
-const imageSources = ref(Config.carousel);
+const imageSources = Config.carousel;
 
 function updateSlidesPerView() {
     slidesPerView.value = window.innerWidth > 768 ? 3 : 1;

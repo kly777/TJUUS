@@ -1,10 +1,14 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import { resolve } from "path";
+import { resolve,dirname } from "path";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import sitemapPlugin from "vite-plugin-sitemap";
 import compression from "vite-plugin-compression";
 import tailwindcss from '@tailwindcss/vite'
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [

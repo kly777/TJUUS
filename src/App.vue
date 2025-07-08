@@ -18,7 +18,7 @@ import { MenuOutlined } from '@vicons/material'
 const router = useRouter();
 const store = useDarkStore();
 const dark = computed(() => store.dark ? darkTheme : null);
-const hide = computed(() => router.currentRoute.value.path === '/');
+// const hide = computed(() => router.currentRoute.value.path === '/');
 // 响应式窗口宽度检测
 const isMobile = ref(false);
 const updateIsMobile = () => {

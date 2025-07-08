@@ -28,31 +28,36 @@ interface NewsItem {
 const newsItems = ref<NewsItem[]>([]);
 
 async function getNews() {
-    const fileNames = import.meta.glob('@/assets/News/*.md', { query: '?raw', import: 'default', eager: true });
-    for (const filePath of Object.keys(fileNames)) {
+    const fileNames = import.meta.glob(
+        '@/assets/News/*.md',
+        { query: '?raw', import: 'default', eager: true }
+    );
+    const promises = Object.keys(fileNames).map(async (filePath) => {
         const mdContent = fileNames[filePath];
         const result = frontMatter(mdContent);
 
         let fileName = filePath.split('/').pop() || '';
         fileName = fileName.split('.')[0];
-        const attributes = result.attributes as Attributes;
-        newsItems.value.push({ fileName, content: result.body, attributes: attributes });
-        newsItems.value.sort((a, b) => {
-            console.log(a.attributes.date);
-            const hasDateA = a.attributes.date == undefined ? false : true;
-            const hasDateB = b.attributes.date == undefined ? false : true;
-            if (!hasDateA && !hasDateB) return 0; // 都没有日期，保持原顺序
-            if (!hasDateA) return 1; // a 没有日期，排到最后
-            if (!hasDateB) return -1; // b 没有日期，排到最后
-            const dateA = dayjs(a.attributes.date);
-            const dateB = dayjs(b.attributes.date);
-            return dateB.diff(dateA);
-        });
-    }
+
+        return {
+            fileName,
+            content: result.body,
+            attributes: result.attributes as Attributes
+        };
+    });
+
+    newsItems.value = await Promise.all(promises);
+
+    // 统一排序逻辑
+    newsItems.value.sort((a, b) => {
+        const dateA = a.attributes.date ? dayjs(a.attributes.date) : dayjs(0);
+        const dateB = b.attributes.date ? dayjs(b.attributes.date) : dayjs(0);
+        return dateB.diff(dateA);
+    });
 }
 
 onMounted(async () => {
-    await getNews();
+    getNews();
 });
 </script>
 

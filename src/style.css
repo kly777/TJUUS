@@ -1,10 +1,5 @@
-@import "tailwindcss/preflight";
 @import "tailwindcss/theme";
 @import "tailwindcss/utilities";
-@custom-variant dark (&:where(.dark, .dark *));
-
-
-
 
 body {
     font-family: "Fusion Pixel", sans-serif;
@@ -17,18 +12,14 @@ img {
 }
 * {
     font-family: "FusionPixel", sans-serif;
+    box-sizing: border-box;
 }
 
-/* 动画效果 */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+#app { 
+    scrollbar-width: thin;
 }
 
-.fade-in {
-    animation: fadeIn 0.5s ease-in;
+body{
+    background-color: rgba(0, 0, 0, 0.9);
+    scroll-behavior: smooth;
 }

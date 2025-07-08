@@ -6,9 +6,7 @@ import App from './App.vue'
 import { createDiscreteApi } from 'naive-ui'
 
 
-const { message, notification, dialog, loadingBar } = createDiscreteApi(
-  ['message', 'dialog', 'notification', 'loadingBar']
-)
+createDiscreteApi(['message', 'dialog', 'notification', 'loadingBar'])
 
 const pinia = createPinia()
 const app = createApp(App)

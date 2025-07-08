@@ -3,11 +3,11 @@ import { defineStore } from 'pinia'
 
 export const useDarkStore = defineStore('dark', () => {
     // 从localStorage获取初始值
-    const dark = ref(localStorage.getItem('dark') === 'true')
+    const dark = ref(window.localStorage.getItem('dark') === 'true')
 
     // 监听dark变化并保存到localStorage
     watch(dark, (newVal) => {
-        localStorage.setItem('dark', newVal.toString())
+        window.localStorage.setItem('dark', newVal.toString())
         updateTheme(newVal)
     }, { immediate: true })
 

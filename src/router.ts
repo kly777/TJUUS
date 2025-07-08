@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 
 const routes = [
@@ -25,11 +25,11 @@ const routes = [
         name: "NewsDetail",
         meta: { title: "文章" }
     },
-    {
-        path: "/servers",
-        component: () => import("./components/Servers.vue"),
-        name: "Servers", meta: { title: "服务器" }
-    },
+    // {
+    //     path: "/servers",
+    //     component: () => import("./components/Servers.vue"),
+    //     name: "Servers", meta: { title: "服务器" }
+    // },
     {
         path: "/creeper",
         component: () => import("./components/Home/Creeper.vue"),

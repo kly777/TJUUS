@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "vite",
         "build": "npm run generate-albums && vite build",
+        "production": "npm run generate-albums && vite build --mode production",
         "preview": "vite preview",
         "generate-albums": "node scripts/generateAlbums.cjs",
         "lint": "eslint .",
@@ -13,6 +14,7 @@
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.1.8",
+
         "@typescript-eslint/eslint-plugin": "^8.36.0",
         "@typescript-eslint/parser": "^8.36.0",
         "@vue/tsconfig": "^0.7.0",
@@ -34,6 +36,7 @@
         "vue-router": "^4.5.1"
     },
     "devDependencies": {
+        "@types/markdown-it": "^14.1.2",
         "@eslint/js": "^9.30.1",
         "@types/three": "^0.173.0",
         "@vicons/material": "^0.13.0",

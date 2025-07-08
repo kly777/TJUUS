@@ -7,7 +7,7 @@ declare namespace NodeJS {
 }
 
 interface ImportMeta {
-    glob(url: string, options?: { eager?: boolean; query?; import?}): Record<string, any>;
+    glob(url: string, options?: { eager?: boolean; query?; import?}): Record<string, () => Promise<unknown>>;
 }
 
 declare module '*.md?raw' {
@@ -15,11 +15,7 @@ declare module '*.md?raw' {
     export default content;
 }
 
-declare module '*.vue' {
-    import { DefineComponent } from 'vue';
-    const component: DefineComponent<{}, {}, any>;
-    export default component;
-}
+
 
 /// <reference types="vite/client" />
 /// <reference types="vite/types/importMeta.d.ts" />
