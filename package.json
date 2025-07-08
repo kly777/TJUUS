@@ -28,17 +28,11 @@
         "vue-router": "^4.5.1"
     },
     "devDependencies": {
-        "@types/markdown-it": "^14.1.2",
-        "@types/node": "^22.15.30",
+        "tailwindcss": "^4.1.8",
         "@types/three": "^0.173.0",
         "@vicons/material": "^0.13.0",
         "@vitejs/plugin-vue": "^5.2.4",
-        "autoprefixer": "^10.4.21",
-        "depcheck": "^1.4.7",
         "less": "^4.3.0",
-        "postcss": "^8.5.4",
-        "sharp": "^0.34.2",
-        "tailwindcss": "^4.1.8",
         "typescript": "^5.8.3",
         "vite": "^6.3.5"
     },
