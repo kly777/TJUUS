@@ -1,15 +1,16 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import { resolve,dirname } from "path";
+
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import sitemapPlugin from "vite-plugin-sitemap";
 import compression from "vite-plugin-compression";
+
 import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath } from "url";
+import { resolve, dirname } from "path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
@@ -22,7 +23,7 @@ export default defineConfig({
       threshold: 10240,
       algorithm: "gzip",
       ext: ".gz",
-    }),
+    })
   ],
   css: {},
   resolve: {

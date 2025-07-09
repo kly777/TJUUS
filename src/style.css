@@ -3,24 +3,25 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-    font-family: "Fusion Pixel", sans-serif;
-    line-height: 1.6;
+  font-family: "Fusion Pixel", sans-serif;
+  line-height: 1.6;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
+
 * {
-    font-family: "FusionPixel", sans-serif;
-    box-sizing: border-box;
+  font-family: "FusionPixel", sans-serif;
+  box-sizing: border-box;
 }
 
 #app {
-    scrollbar-width: thin;
+  scrollbar-width: thin;
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.9);
-    scroll-behavior: smooth;
+  background-color: rgba(0, 0, 0, 0.9);
+  scroll-behavior: smooth;
 }

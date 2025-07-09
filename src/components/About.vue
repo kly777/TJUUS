@@ -8,21 +8,21 @@ const result = md.render(about);
 
 
 <template>
-    <div class="container sm:mx-10 lg:mx-30 mt-8">
-        <div v-html="result" class="content .dark:text-white">
-        </div>
+  <div class="container sm:mx-10 lg:mx-30 mt-8">
+    <div v-html="result" class="content .dark:text-white">
     </div>
+  </div>
 </template>
 
 
 
 <style scoped>
 .content {
-    box-sizing: border-box;
-    min-width: 200px;
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 45px;
-    height: 100%;
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  height: 100%;
 }
 </style>

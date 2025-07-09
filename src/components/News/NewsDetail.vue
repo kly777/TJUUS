@@ -25,12 +25,11 @@
 </template>
 
 <style scoped>
-
 .markdown-body {
   font-family: inherit;
   color: inherit;
   line-height: 1.6 !important;
-  margin:unset !important;
+  margin: unset !important;
 }
 
 h1,
@@ -42,7 +41,6 @@ h3 {
 p {
   margin-bottom: 1em;
 }
-
 </style>
 
 
