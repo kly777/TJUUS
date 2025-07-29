@@ -1,5 +1,5 @@
 <template>
-    <div
+    <div @click="goToDetail"
         class="card border border-solid border-zinc-200 rounded-lg shadow-lg border-opacity-20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white bg-white transition-all duration-500 ease-in-out hover:scale-105 lg:w-4/5 max-w-[780px] box-border">
         <div class="flex flex-col md:flex-row md:h-55 p-0">
             <!-- 图片 -->
@@ -20,6 +20,27 @@
     </div>
 </template>
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function goToDetail() {
+    // 根据标题映射到对应的路由名称
+    const routeMap: Record<string, string> = {
+        "社团简介": "ClubIntro",
+        "卫津路校区复刻项目": "WeijinluProject",
+        "北洋园校区复刻项目": "BeiyangyuanProject",
+        "运营周报": "WeeklyReport",
+        "新闻报道": "NewsReport"
+    }
+
+    if (routeMap[props.title]) {
+        router.push({ name: routeMap[props.title] })
+    } else {
+        console.warn(`未找到标题"${props.title}"对应的路由`)
+    }
+}
+
 // 截取字符串并添加省略号
 function lessResult(result: string) {
     return result.slice(0, 30) + (result.length > 30 ? '......' : '');

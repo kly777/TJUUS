@@ -39,6 +39,36 @@ const routes = [
         path: "/gallery",
         component: () => import("./components/Gallery.vue"),
         name: "Gallery", meta: { title: "图库" }
+    },
+    {
+        path: "/club-intro",
+        component: () => import("./components/InfoPages/ClubIntro.vue"),
+        name: "ClubIntro",
+        meta: { title: "社团简介" }
+    },
+    {
+        path: "/weijinlu-project",
+        component: () => import("./components/InfoPages/WeijinluProject.vue"),
+        name: "WeijinluProject",
+        meta: { title: "卫津路校区复刻" }
+    },
+    {
+        path: "/beiyangyuan-project",
+        component: () => import("./components/InfoPages/BeiyangyuanProject.vue"),
+        name: "BeiyangyuanProject",
+        meta: { title: "北洋园校区复刻" }
+    },
+    {
+        path: "/weekly-report",
+        component: () => import("./components/InfoPages/WeeklyReport.vue"),
+        name: "WeeklyReport",
+        meta: { title: "运营周报" }
+    },
+    {
+        path: "/news-report",
+        component: () => import("./components/InfoPages/NewsReport.vue"),
+        name: "NewsReport",
+        meta: { title: "新闻报道" }
     }
 ]
 

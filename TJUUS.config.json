@@ -2,28 +2,28 @@
     "server": [
         {
             "imageSrc": "server/tianda1.png",
-            "title": "文本1",
-            "description": "这是文本1的描述"
+            "title": "社团简介",
+            "description": "天津大学卫津路校区复刻项目社团介绍"
+        },
+        {
+            "imageSrc": "building/图书馆.png",
+            "title": "卫津路校区复刻项目",
+            "description": "卫津路校区标志性建筑数字化复刻工程"
+        },
+        {
+            "imageSrc": "building/北洋广场.png",
+            "title": "北洋园校区复刻项目",
+            "description": "北洋园校区核心区域三维建模与场景还原"
         },
         {
             "imageSrc": "server/tianda2.png",
-            "title": "文本2",
-            "description": "这是文本2的描述"
+            "title": "运营周报",
+            "description": "复刻项目每周进度与技术指标报告"
         },
         {
             "imageSrc": "server/tianda2.png",
-            "title": "文本3",
-            "description": "这是文本3的描述"
-        },
-        {
-            "imageSrc": "server/tianda2.png",
-            "title": "文本4",
-            "description": "这是文本4的描述"
-        },
-        {
-            "imageSrc": "server/tianda2.png",
-            "title": "文本5",
-            "description": "这是文本5的描述"
+            "title": "新闻报道",
+            "description": "项目进展与校园文化传承动态资讯"
         }
     ],
     "carousel": [

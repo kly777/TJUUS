@@ -3,10 +3,10 @@
     <div class="sm:mx-10 lg:mx-30 mt-8 mx-auto max-w-5xl">
       <!-- 标签区域 -->
       <div class="tags mt-20 ml-10 flex flex-wrap gap-4">
-        <n-tag type="primary" class="bg-blue-500 text-white">
+        <n-tag type="primary" class="bg-blue-500 text-white" v-if="attributes.author">
           作者：{{ attributes.author }}
         </n-tag>
-        <n-tag type="info" class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+        <n-tag type="info" class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200" v-if="attributes.date">
           发布时间：{{ dayjs(attributes.date).format('YYYY-MM-DD') }}
         </n-tag>
       </div>
@@ -89,12 +89,10 @@ onMounted(async () => {
     const rawContent = content.default as string
     const result = frontMatter<Attributes>(rawContent)
 
-
+    console.log(result)
+    renderedContent.value = md.render(result.body)
     if ('date' in result.attributes && 'author' in result.attributes) {
-      renderedContent.value = md.render(result.body)
       attributes.value = result.attributes as Attributes
-    } else {
-      throw new Error('Invalid markdown metadata')
     }
   } catch (error) {
     console.error('加载md文件时出错：', error)

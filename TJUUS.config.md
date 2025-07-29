@@ -44,6 +44,7 @@
      - `description` (字符串)：卡片描述。
 
    **示例**：
+
    ```json
    {
        "imageSrc": "server/tianda1.png",
@@ -59,6 +60,7 @@
      - 数组中的每个元素为一个图片资源路径。
 
    **示例**：
+
    ```json
    [
        "eg/1.png",
@@ -79,6 +81,7 @@
      - `description` (字符串)：卡片描述。
 
    **示例**：
+
    ```json
    {
        "imageSrc": "building/dongdamen.jpeg",
