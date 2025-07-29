@@ -78,7 +78,7 @@ const routes = [
 const router = createRouter({
     history: createWebHashHistory("/TJUUS/"),
     routes,
-    // 添加滚动行为控制
+
     scrollBehavior(to, from, savedPosition) {
         // 如果路由有 hash，滚动到对应元素
         if (to.hash) {
@@ -90,10 +90,12 @@ const router = createRouter({
         // 如果存在保存的位置（例如后退/前进），则恢复该位置
         else if (savedPosition) {
             return savedPosition;
-        }
-        // 否则保持当前位置
-        else {
-            return { left: 0, top: 0 };
+        } else {
+            return new Promise((resolve) => {
+                window.setTimeout(() => {
+                    resolve({ left: 0, top: 0 });
+                }, 202);
+            });
         }
     },
 });
@@ -110,6 +112,8 @@ router.beforeEach((to, _from, next) => {
         next();
     }
 });
+
+router.afterEach(() => {});
 
 router.onError((error) => {
     console.error("路由错误:", error);

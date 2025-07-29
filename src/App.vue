@@ -6,7 +6,7 @@ import { useDarkStore } from "./state";
 import 'animate.css';
 import { NBackTop, NLayout, NLayoutHeader, NLayoutContent, NButton, NSpace, NConfigProvider } from 'naive-ui';
 import { useRouter } from "vue-router";
-import Footer from "./App/Footer.vue";
+
 
 import { darkTheme } from 'naive-ui'
 
@@ -107,7 +107,7 @@ const handleMenuSelect = (key: string) => {
         </n-space>
       </n-layout-header>
 
-      <n-layout-content class="light:bg-blue50 duration-1000 dark:bg-dark min-h-screen"
+      <n-layout-content class="light:bg-blue50 duration-1000 dark:bg-dark min-h-[100vh]"
         :class="store.dark ? '' : 'bg-gradient'">
 
         <RouterView class="min-h-screen" v-slot="{ Component }">
@@ -119,7 +119,6 @@ const handleMenuSelect = (key: string) => {
         </RouterView>
 
       </n-layout-content>
-      <Footer />
     </n-layout>
 
     <n-back-top :show-on-offset="300" class="z-2" />

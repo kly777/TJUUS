@@ -11,6 +11,7 @@ import Carousel from "./Home/Carousel.vue";
 import GlassSplitView from "./Home/About/GlassSplitView.vue";
 import FollowUs from "./Home/FollowUs.vue";
 import Creeper from "./Home/3DModels/Creeper.vue";
+import Footer from "@/App/Footer.vue";
 </script>
 
 <template>
@@ -54,6 +55,7 @@ import Creeper from "./Home/3DModels/Creeper.vue";
 
     <!-- 关注我们 -->
     <FollowUs class="mt" />
+    <Footer/>
   </div>
 </template>
 
