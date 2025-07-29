@@ -1,7 +1,7 @@
 <template>
     <div class="servers-container sm:w-85% box-border">
         <div class="grid place-items-center">
-            <InfoCard v-for="(server, index) in servers" :key="index" :imageSrc="server.imageSrc" :title="server.title"
+            <ProjectCard v-for="(server, index) in servers" :key="index" :imageSrc="server.imageSrc" :title="server.title"
                 :description="server.description" :imageOnRight="index % 2 === 1" />
         </div>
     </div>
@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import InfoCard from './InfoCard.vue'
+import ProjectCard from './ProjectCard.vue'
 import Config from "@/../TJUUS.config.json"
 const servers = ref(Config.server)
 </script>

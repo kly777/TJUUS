@@ -5,12 +5,12 @@ import { NDivider } from "naive-ui";
 
 import Developing from "./Home/Developing.vue";
 import SectionTitle from "./Home/SectionTitle.vue";
-import InfoCards from "./Home/Server/InfoCards.vue";
+import ProjectCards from "./Home/Project/ProjectCards.vue";
 import FeaturedItems from "./Home/Building/FeaturedItems.vue";
 import Carousel from "./Home/Carousel.vue";
-import GlassSplitView from "./Home/GlassSplitView.vue";
+import GlassSplitView from "./Home/About/GlassSplitView.vue";
 import FollowUs from "./Home/FollowUs.vue";
-import Creeper from "./Home/Creeper.vue";
+import Creeper from "./Home/3DModels/Creeper.vue";
 </script>
 
 <template>
@@ -24,10 +24,10 @@ import Creeper from "./Home/Creeper.vue";
 
   <n-divider :dashed="true"></n-divider>
 
-  <!-- 信息卡片和右边的爬行者 -->
+  <!-- 项目卡片和右边的爬行者 -->
   <section class="grid sc box-border justify-center items-center sm:mx-7 mx-9">
     <div class="grid-cols-1">
-      <InfoCards class="row lg:w-80%" />
+      <ProjectCards class="row lg:w-80%" />
     </div>
     <div class="h-auto w-0 justify-self-start creeper animate__animated animate__fadeInRight animate__delay-2s">
       <Creeper

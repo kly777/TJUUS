@@ -23,6 +23,16 @@
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
+const props = defineProps<{
+    imageSrc: string
+    title: string
+    description: string
+    imageOnRight?: boolean
+}>()
+
+function lessResult(description: string) {
+    return description.length > 100 ? description.slice(0, 100) + '...' : description
+}
 
 function goToDetail() {
     // 根据标题映射到对应的路由名称
@@ -33,36 +43,6 @@ function goToDetail() {
         "运营周报": "WeeklyReport",
         "新闻报道": "NewsReport"
     }
-
-    if (routeMap[props.title]) {
-        router.push({ name: routeMap[props.title] })
-    } else {
-        console.warn(`未找到标题"${props.title}"对应的路由`)
-    }
+    router.push({ name: routeMap[props.title] })
 }
-
-// 截取字符串并添加省略号
-function lessResult(result: string) {
-    return result.slice(0, 30) + (result.length > 30 ? '......' : '');
-}
-
-// 定义 props
-const props = defineProps({
-    imageSrc: {
-        type: String,
-        required: true,
-    },
-    title: {
-        type: String,
-        required: true,
-    },
-    description: {
-        type: String,
-        required: true,
-    },
-    imageOnRight: {
-        type: Boolean,
-        default: false, // 默认图片在左
-    },
-});
 </script>
