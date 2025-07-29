@@ -29,7 +29,7 @@ import Creeper from "./Home/Creeper.vue";
     <div class="grid-cols-1">
       <InfoCards class="row lg:w-80%" />
     </div>
-    <div class="h-auto w-0 justify-self-start creeper">
+    <div class="h-auto w-0 justify-self-start creeper animate__animated animate__fadeInRight animate__delay-2s">
       <Creeper
         class="sm:h-[350px] sm:w-[300px] md:h-[400px] md:w-[400px] lg:h-[550px] lg:w-[550px] h-[260px] w-[250px]" />
     </div>

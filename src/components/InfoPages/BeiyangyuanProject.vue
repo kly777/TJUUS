@@ -1,39 +1,37 @@
 <template>
   <div class="page-container min-h-screen bg-gray-50 dark:bg-zinc-900">
     <!-- Hero Section -->
-    <div class="hero-section bg-gradient-to-br from-orange-400 to-yellow-400 dark:from-orange-700 dark:to-yellow-700 py-20 md:py-28">
+    <div
+      class="hero-section bg-gradient-to-br from-orange-400 to-yellow-400 dark:from-orange-700 dark:to-yellow-700 py-20 md:py-28">
       <div class="hero-content max-w-4xl mx-auto text-center px-4">
         <h1 class="hero-title text-4xl md:text-5xl font-bold text-white mb-4 animate__animated animate__fadeInDown">
           北洋园校区复刻项目
         </h1>
-        <p class="hero-subtitle text-xl md:text-2xl text-white opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
+        <p
+          class="hero-subtitle text-xl md:text-2xl text-white opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
           北洋园校区核心区域三维建模与场景还原
         </p>
       </div>
     </div>
-    
+
     <!-- Content Section -->
     <div class="content-section max-w-6xl mx-auto px-4 py-12">
       <div class="flex flex-col lg:flex-row gap-8">
         <!-- Map Section -->
         <div class="map-container bg-white dark:bg-zinc-800 rounded-xl shadow-lg p-6 flex-1">
           <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">校区布局概览</h2>
-          
+
           <div class="map-overview mb-8">
             <div class="map-grid grid grid-cols-3 gap-3">
-              <div
-                v-for="i in 9"
-                :key="i"
-                class="map-cell aspect-square rounded-lg border-2 border-gray-200 dark:border-zinc-700"
-                :class="[
+              <div v-for="i in 9" :key="i"
+                class="map-cell aspect-square rounded-lg border-2 border-gray-200 dark:border-zinc-700" :class="[
                   i % 3 === 0 ? 'bg-orange-400' : '',
                   i % 3 === 1 ? 'bg-purple-500' : '',
                   i % 3 === 2 ? 'bg-teal-400' : ''
-                ]"
-              ></div>
+                ]"></div>
             </div>
           </div>
-          
+
           <div class="map-legend flex flex-wrap gap-4">
             <div class="legend-item flex items-center">
               <div class="color-box w-5 h-5 rounded mr-2 bg-orange-400"></div>
@@ -49,14 +47,11 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Stats Section -->
         <div class="stats-container grid grid-cols-1 md:grid-cols-3 gap-6 flex-1">
-          <div
-            v-for="(stat, index) in stats"
-            :key="index"
-            class="stat-card bg-white dark:bg-zinc-800 rounded-xl shadow-lg p-6 text-center transition-all duration-300 hover:scale-105"
-          >
+          <div v-for="(stat, index) in stats" :key="index"
+            class="stat-card bg-white dark:bg-zinc-800 rounded-xl shadow-lg p-6 text-center transition-all duration-300 hover:scale-105">
             <div class="stat-value text-4xl font-bold mb-2 text-orange-500 dark:text-orange-400">
               {{ stat.value }}
             </div>
@@ -85,11 +80,7 @@ const stats = [
 </style>
 
 <style scoped>
-/* 共用样式继承自ClubIntro */
-.page-container, .hero-section, .hero-content, 
-.hero-title, .hero-subtitle, .content-section {
-  /* 复用基础样式 */
-}
+
 
 .map-container {
   display: flex;
@@ -99,7 +90,7 @@ const stats = [
 
 .map-overview {
   flex: 2;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 20px;
   backdrop-filter: blur(10px);
@@ -114,14 +105,14 @@ const stats = [
 }
 
 .map-cell {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .map-cell:hover {
   transform: scale(1.05);
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .map-legend {
@@ -156,7 +147,7 @@ const stats = [
   background: white;
   border-radius: 15px;
   min-width: 120px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .stat-value {
@@ -172,7 +163,7 @@ const stats = [
 
 /* 深色模式适配 */
 .dark .map-overview {
-  background: rgba(45,45,45,0.3);
+  background: rgba(45, 45, 45, 0.3);
 }
 
 .dark .map-legend,

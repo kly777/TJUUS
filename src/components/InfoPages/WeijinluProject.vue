@@ -1,31 +1,31 @@
 <template>
   <div class="page-container min-h-screen bg-gray-50 dark:bg-zinc-900">
     <!-- Hero Section -->
-    <div class="hero-section bg-gradient-to-br from-green-500 to-lime-400 dark:from-green-700 dark:to-lime-700 py-20 md:py-28">
+    <div
+      class="hero-section bg-gradient-to-br from-green-500 to-lime-400 dark:from-green-700 dark:to-lime-700 py-20 md:py-28">
       <div class="hero-content max-w-4xl mx-auto text-center px-4">
         <h1 class="hero-title text-4xl md:text-5xl font-bold text-white mb-4 animate__animated animate__fadeInDown">
           卫津路校区复刻项目
         </h1>
-        <p class="hero-subtitle text-xl md:text-2xl text-white opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
+        <p
+          class="hero-subtitle text-xl md:text-2xl text-white opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
           卫津路校区标志性建筑数字化复刻工程
         </p>
       </div>
     </div>
-    
+
     <!-- Content Section -->
     <div class="content-section max-w-6xl mx-auto px-4 py-12">
       <div class="flex flex-col lg:flex-row gap-8">
         <!-- Timeline Section -->
         <div class="timeline-container bg-white dark:bg-zinc-800 rounded-xl shadow-lg p-6 flex-1">
           <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">项目进展</h2>
-          
+
           <div class="timeline grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div
-              v-for="(step, index) in steps"
-              :key="index"
-              class="timeline-item bg-gray-100 dark:bg-zinc-700 rounded-lg p-6 transition-all duration-300 hover:scale-105"
-            >
-              <div class="timeline-badge w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
+            <div v-for="(step, index) in steps" :key="index"
+              class="timeline-item bg-gray-100 dark:bg-zinc-700 rounded-lg p-6 transition-all duration-300 hover:scale-105">
+              <div
+                class="timeline-badge w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
                 {{ step.id }}
               </div>
               <div class="timeline-content text-center">
@@ -35,17 +35,14 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Gallery Preview -->
         <div class="gallery-container bg-white dark:bg-zinc-800 rounded-xl shadow-lg p-6 flex-1">
           <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">建筑预览</h2>
-          
+
           <div class="gallery-preview grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div
-              v-for="i in 3"
-              :key="i"
-              class="gallery-item aspect-square bg-gray-200 dark:bg-zinc-700 rounded-lg border-2 border-dashed border-gray-300 dark:border-zinc-600 flex items-center justify-center text-gray-500 dark:text-gray-400 transition-all duration-300 hover:scale-105"
-            >
+            <div v-for="i in 3" :key="i"
+              class="gallery-item aspect-square bg-gray-200 dark:bg-zinc-700 rounded-lg border-2 border-dashed border-gray-300 dark:border-zinc-600 flex items-center justify-center text-gray-500 dark:text-gray-400 transition-all duration-300 hover:scale-105">
               <span class="text-lg">建筑 {{ i }}</span>
             </div>
           </div>
@@ -64,13 +61,6 @@ const steps = [
 </script>
 
 <style scoped>
-/* 保留原有样式 */
-.hero-title,
-.hero-subtitle,
-.content-section {
-  /* 复用基础样式 */
-}
-
 .timeline {
   position: relative;
   max-width: 800px;

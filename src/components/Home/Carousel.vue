@@ -1,5 +1,5 @@
 <template>
-    <n-carousel autoplay :slides-per-view="slidesPerView" :space-between="20">
+    <n-carousel autoplay :slides-per-view="slidesPerView" :space-between="20" class="animate__animated animate__fadeInUp animate__delay-1s">
         <img v-for="(src, index) in imageSources" :key="index" class="carousel-img" :src="src" />
     </n-carousel>
 </template>
