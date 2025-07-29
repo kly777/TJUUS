@@ -3,7 +3,7 @@ import "animate.css";
 import Switcher from "./App/Switcher.vue";
 import { useDarkStore } from "./state";
 
-
+import 'animate.css';
 import { NBackTop, NLayout, NLayoutHeader, NLayoutContent, NButton, NSpace, NConfigProvider } from 'naive-ui';
 import { useRouter } from "vue-router";
 import Footer from "./App/Footer.vue";
@@ -106,13 +106,22 @@ const handleMenuSelect = (key: string) => {
           </n-space>
         </n-space>
       </n-layout-header>
+
       <n-layout-content class="light:bg-blue50 duration-1000 dark:bg-dark min-h-screen"
         :class="store.dark ? '' : 'bg-gradient'">
-        <RouterView></RouterView>
-      </n-layout-content>
 
+        <RouterView class="min-h-screen" v-slot="{ Component }">
+          <transition name="fade" mode="out-in">
+
+            <component :is="Component" />
+
+          </transition>
+        </RouterView>
+
+      </n-layout-content>
+      <Footer />
     </n-layout>
-    <Footer />
+
     <n-back-top :show-on-offset="300" class="z-2" />
   </n-config-provider>
 </template>
@@ -237,5 +246,16 @@ const handleMenuSelect = (key: string) => {
       -10vmax 10vmax,
       40vmax 60vmax;
   }
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
