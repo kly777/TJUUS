@@ -25,17 +25,6 @@ const routes = [
         name: "NewsDetail",
         meta: { title: "文章" },
     },
-    // {
-    //     path: "/servers",
-    //     component: () => import("./components/Servers.vue"),
-    //     name: "Servers", meta: { title: "服务器" }
-    // },
-    {
-        path: "/creeper",
-        component: () => import("./components/Home/Creeper.vue"),
-        name: "Creeper",
-        meta: { title: "苦力怕" },
-    },
     {
         path: "/gallery",
         component: () => import("./components/Gallery.vue"),
@@ -80,21 +69,36 @@ const router = createRouter({
     routes,
 
     scrollBehavior(to, from, savedPosition) {
-        // 如果路由有 hash，滚动到对应元素
-        if (to.hash) {
-            return {
-                el: to.hash,
-                behavior: "smooth",
-            };
-        }
-        // 如果存在保存的位置（例如后退/前进），则恢复该位置
-        else if (savedPosition) {
-            return savedPosition;
-        } else {
+        if (savedPosition) {
+            return new Promise((resolve) => {
+                // 假设动画持续时间为 500ms
+                window.setTimeout(() => {
+                    resolve(savedPosition);
+                }, 252);
+            });
+        } else if (to.hash) {
             return new Promise((resolve) => {
                 window.setTimeout(() => {
-                    resolve({ left: 0, top: 0 });
-                }, 202);
+                    resolve({
+                        el: to.hash,
+                        behavior: "smooth",
+                    });
+                }, 252);
+            });
+        } else {
+            return new Promise((resolve) => {
+                window.requestAnimationFrame(() => {
+                    if (
+                        window.history.state &&
+                        window.history.state.scrollPosition
+                    ) {
+                        resolve(window.history.state.scrollPosition);
+                    } else {
+                        window.setTimeout(() => {
+                            resolve({ left: 0, top: 0 });
+                        }, 252); // 与动画时间一致
+                    }
+                });
             });
         }
     },

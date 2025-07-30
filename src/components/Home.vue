@@ -55,7 +55,7 @@ import Footer from "@/App/Footer.vue";
 
     <!-- 关注我们 -->
     <FollowUs class="mt" />
-    <Footer/>
+    <Footer />
   </div>
 </template>
 

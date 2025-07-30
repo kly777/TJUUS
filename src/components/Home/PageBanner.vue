@@ -35,9 +35,9 @@ watch(y, (val) => {
     background-size: cover;
 
     background-position: center;
-    height: 140%;
+    height: 135%;
     transform: translateY(0);
-    transition: transform 0.5s ease-out;
+    transition: transform 0.4s ease-out;
 }
 
 .title {
