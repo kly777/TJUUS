@@ -9,7 +9,7 @@
         </h1>
         <p
           class="hero-subtitle text-xl md:text-2xl text-white opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
-          项目进展与校园文化传承动态资讯
+          项目进展与社区生态
         </p>
       </div>
     </div>

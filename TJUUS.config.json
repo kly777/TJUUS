@@ -43,12 +43,14 @@
         {
             "imageSrc": "building/shiShi.png",
             "title": "北洋广场",
-            "description": "实事求是"
+            "description": "实事求是",
+            "blueMap":"http://unioncompute.top:1896/#overworld:3179:-31:985:0:2.34:1.77:0:0:free"
         },
         {
             "imageSrc": "building/胡.png",
             "title": "求是亭",
-            "description": "求真务实"
+            "description": "求真务实",
+            "blueMap":"http://unioncompute.top:1896/#overworld:3003:-34:1032:0:0.56:1.59:0:0:free"
         },
         {
             "imageSrc": "building/水塔.png",

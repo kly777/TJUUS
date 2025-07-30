@@ -39,16 +39,66 @@ const routes = [
     },
     {
         path: "/weijinlu-project",
-        component: () => import("./components/InfoPages/WeijinluProject.vue"),
+        component: () => import("./components/InfoPages/CampusProject.vue"),
         name: "WeijinluProject",
         meta: { title: "卫津路校区复刻" },
+        props: {
+            campusType: "weijinlu",
+            colorConfig: {
+                from: "#00b09b",
+                to: "#96c93d"
+            },
+            contentData: {
+                title: "卫津路校区复刻项目",
+                subtitle: "卫津路校区标志性建筑数字化复刻工程",
+                progress: 75,
+                stats: [
+                    { value: "28", label: "建筑模型" },
+                    { value: "10", label: "团队成员" }
+                ],
+                steps: [
+                    { id: "1", title: "数据采集", description: "激光扫描与摄影测量技术结合..." },
+                    { id: "2", title: "模型重建", description: "基于点云数据的精细建模..." },
+                    { id: "3", title: "纹理贴图", description: "高分辨率照片映射表面材质..." }
+                ],
+                team: [
+                    { name: "王五", role: "项目经理", initials: "WW" },
+                    { name: "赵六", role: "建模师", initials: "ZL" },
+                    { name: "钱七", role: "纹理设计师", initials: "QQ" }
+                ]
+            }
+        }
     },
     {
         path: "/beiyangyuan-project",
-        component: () =>
-            import("./components/InfoPages/BeiyangyuanProject.vue"),
+        component: () => import("./components/InfoPages/CampusProject.vue"),
         name: "BeiyangyuanProject",
         meta: { title: "北洋园校区复刻" },
+        props: {
+            campusType: "beiyangyuan",
+            colorConfig: {
+                from: "#ff7e5f",
+                to: "#feb47b"
+            },
+            contentData: {
+                title: "北洋园校区复刻项目",
+                subtitle: "北洋园校区核心区域三维建模与场景还原",
+                progress: 85,
+                stats: [
+                    { value: "32", label: "建筑模型" },
+                    { value: "12", label: "团队成员" }
+                ],
+                steps: [
+                    { id: "1", title: "数据采集", description: "无人机航拍与实地测量..." },
+                    { id: "2", title: "模型构建", description: "建筑结构精细建模..." }
+                ],
+                team: [
+                    { name: "张三", role: "项目经理", initials: "ZS" },
+                    { name: "李四", role: "建模师", initials: "LS" },
+                    { name: "王二", role: "场景设计师", initials: "WE" }
+                ]
+            }
+        }
     },
     {
         path: "/weekly-report",

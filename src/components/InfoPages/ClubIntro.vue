@@ -9,7 +9,7 @@
         </h1>
         <p
           class="hero-subtitle text-xl md:text-2xl text-white opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
-          天津大学卫津路校区复刻项目社团介绍
+          TJUUS 社团介绍
         </p>
       </div>
     </div>

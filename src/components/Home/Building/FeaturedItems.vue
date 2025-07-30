@@ -2,7 +2,7 @@
     <div class="building-container">
         <div class="grid" :style="{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }">
             <FeaturedItem v-for="(build, index) in buildings" :key="index" :imageSrc="build.imageSrc"
-                :title="build.title" :description="build.description" />
+                :title="build.title" :description="build.description" :blueMap="build.blueMap"/>
         </div>
     </div>
 </template>
