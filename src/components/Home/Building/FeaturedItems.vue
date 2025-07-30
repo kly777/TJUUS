@@ -10,7 +10,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import FeaturedItem from './FeaturedItem.vue'
-import Config from "@/../TJUUS.config.json"
+import Config from "@/TJUUS.config"
 
 const buildings = ref(Config.building)
 </script>

@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import { NCarousel } from "naive-ui";
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import Config from "@/../TJUUS.config.json"
+import Config from "@/TJUUS.config"
 const slidesPerView = ref(1);
 const imageSources = Config.carousel;
 

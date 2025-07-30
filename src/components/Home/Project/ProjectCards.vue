@@ -1,8 +1,8 @@
 <template>
     <div class="servers-container sm:w-85% box-border">
         <div class="grid place-items-center">
-            <ProjectCard v-for="(server, index) in servers" :key="index" :imageSrc="server.imageSrc" :title="server.title"
-                :description="server.description" :imageOnRight="index % 2 === 1" />
+            <ProjectCard v-for="(server, index) in servers" :key="index" :imageSrc="server.imageSrc"
+                :title="server.title" :description="server.description" :imageOnRight="index % 2 === 1" />
         </div>
     </div>
 </template>
@@ -10,8 +10,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import ProjectCard from './ProjectCard.vue'
-import Config from "@/../TJUUS.config.json"
-const servers = ref(Config.server)
+import Config from "@/TJUUS.config"
+const servers = ref(Config.project)
 </script>
 
 <style scoped>

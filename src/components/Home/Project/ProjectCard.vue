@@ -1,6 +1,6 @@
 <template>
     <div @click="goToDetail"
-        class="card border border-solid border-zinc-200 rounded-lg shadow-lg border-opacity-20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white bg-white transition-all duration-500 ease-in-out hover:scale-105 lg:w-4/5 max-w-[780px] box-border">
+        class="card border border-solid border-zinc-200 rounded-lg shadow-lg border-opacity-20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white bg-white transition-all duration-500 ease-in-out hover:scale-105 lg:w-4/5 max-w-[780px] box-border hover:cursor-pointer">
         <div class="flex flex-col md:flex-row md:h-55 p-0">
             <!-- 图片 -->
             <div class="w-full md:w-1/2" :class="{ 'md:order-2': imageOnRight, 'order-1': !imageOnRight }">
