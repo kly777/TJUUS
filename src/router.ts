@@ -64,6 +64,12 @@ const routes = [
         name: "NewsReport",
         meta: { title: "新闻报道" },
     },
+    {
+        path: "/finance-report",
+        component: () => import("./components/InfoPages/FinanceReport.vue"),
+        name: "FinanceReport",
+        meta: { title: "财报公示" },
+    },
 ];
 
 const router = createRouter({

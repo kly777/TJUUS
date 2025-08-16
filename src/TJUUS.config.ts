@@ -59,6 +59,11 @@ const config: AppConfig = {
             title: "新闻报道",
             description: "项目进展与校园文化传承动态资讯",
         },
+        {
+            imageSrc: "server/tianda2.png",
+            title: "财报公示",
+            description: "TJUUS社团收支定期汇总报告",
+        },
     ],
     carousel: [
         "eg/1.png",
