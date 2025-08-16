@@ -22,6 +22,6 @@ TJUUS 是一个天津大学 Minecraft 社团
 
 ## 配置与自定义
 
-为了方便管理和更新网页内容，项目中使用了 `TJUUS.config.json` 文件来配置各个部分的内容。你可以通过查看并编辑 `TJUUS.config.md` 文件了解如何修改这些配置。
+为了方便管理和更新网页内容，项目中使用了 `TJUUS.config.ts` 文件来配置各个部分的内容。你可以通过查看 `TJUUS.config.md` 文件了解如何修改这些配置。
 
-- [TJUUS.config.md](./TJUUS.config.md)：详细介绍了 `TJUUS.config.json` 的配置方法和字段说明。
+- [TJUUS.config.md](./TJUUS.config.md)：详细介绍了 `TJUUS.config.ts` 的配置方法和字段说明。
