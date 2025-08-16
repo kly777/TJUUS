@@ -41,7 +41,8 @@ function goToDetail() {
         "卫津路校区复刻项目": "WeijinluProject",
         "北洋园校区复刻项目": "BeiyangyuanProject",
         "运营周报": "WeeklyReport",
-        "新闻报道": "NewsReport"
+        "新闻报道": "NewsReport",
+        "财报公示": "FinanceReport"
     }
     router.push({ name: routeMap[props.title] })
 }
